@@ -1,0 +1,112 @@
+{
+  "name": "react-awesome-loaders",
+  "version": "0.1.30",
+  "description": "High quality, super responsive and completely customisable Loading Animations to insert into your website with single line of code.",
+  "main": "./lib/index.js",
+  "dependencies": {
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "gsap": "^3.5.1",
+    "jquery": "^3.5.1",
+    "node-sass": "^4.14.1",
+    "polished": "^4.0.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-responsive": "^8.2.0",
+    "react-scripts": "4.0.1",
+    "styled-components": "^5.2.1",
+    "three": "^0.124.0",
+    "web-vitals": "^0.2.4",
+    "zdog": "^1.1.2"
+  },
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashutosh1919/react-awesome-loaders.git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-syntax-jsx": "^7.12.1",
+    "@babel/plugin-transform-react-jsx": "^7.12.12",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "path": "^0.12.7",
+    "prop-types": "^15.6.0",
+    "regenerator-runtime": "^0.13.7",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^3.2.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-react-jsx"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "keywords": [
+    "awesome-loaders",
+    "react-awesome-loaders",
+    "react",
+    "react-components",
+    "loaders",
+    "spinners",
+    "loader",
+    "spinner",
+    "react-loaders",
+    "react-loader",
+    "react-spinners",
+    "react-spinner",
+    "react-css-spinners",
+    "react-css-loaders-kit",
+    "react-pure-css-spinners",
+    "react-pure-css-loaders",
+    "react-loaders-kit",
+    "progress",
+    "progress-indicator",
+    "activity",
+    "activity-loader",
+    "loading",
+    "loading-indicators",
+    "react-loading-indicators",
+    "react-loading-animations",
+    "react-css-loading-animations",
+    "progress-bar"
+  ],
+  "author": "ashutosh1919",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ashutosh1919/react-awesome-loaders/issues"
+  },
+  "homepage": "https://github.com/ashutosh1919/react-awesome-loaders#readme"
+}
