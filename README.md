@@ -1,5 +1,5 @@
 <p align="center"> 
-    <img src="doc/src/images/icon.png" align="center" height="300"></img>
+    <img src="doc/src/images/icon.png" align="center" height="200"></img>
 </p>
 
 <h1 align="center">React Awesome Loaders</h1> 
