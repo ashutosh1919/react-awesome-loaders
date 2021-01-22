@@ -276,6 +276,7 @@ FakesAssemblies/
 node_modules/
 lib/
 package-lock.json
+public/
 
 # Visual Studio 6 build log
 *.plg
