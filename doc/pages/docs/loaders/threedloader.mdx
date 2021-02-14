@@ -1,0 +1,47 @@
+---
+title: ThreeD Loader
+section: Loaders
+---
+
+import {Loader} from '../code/loader.js'
+
+# ThreeD Loader
+Loader with effect of rotating two connected rings 
+
+## Usage
+<Loader name="ThreeDLoader" />
+
+```js highlight={1,5-9}
+import { ThreeDLoader } from 'react-awesome-loaders'
+export const ThreeDLoaderComponent = () => {
+    return (
+        <>
+            <ThreeDLoader
+                colorRing1={"#DC2626"}
+                desktopSize={"100px"}
+                mobileSize={"64px"}
+            />
+        </>
+    )
+}
+```
+
+## Parameters
+Below are the parameters for **ThreeDLoader** that you can customize.  
+
+| Option                | Description                      | Type   | Default        |
+| --------------------- | -------------------------------- | ------ | -------------- |
+| **className**         | `class` attribute for loader     | String | `threedloader` |
+| **colorRing1**        | Color of first ring              | String | `#4F46E5`      |
+| **colorRing2**        | Color of second ring             | String | `#4F46E5`      |
+| **colorLight**        | Color of light dropping on rings | String | `#FFFFFF`      |
+| **colorAmbientLight** | Color of ambient light           | String | `#cdd9ed`      |
+| **size**              | Size of the logo                 | String | `64px`         |
+| **desktopSize**       | Size of the logo on desktop      | String | (empty)        |
+| **mobileSize**        | Size of the logo on mobile       | String | (empty)        |
+
+Some of the color parameters like `colorLight`, `colorAmbientLight` are added for this loader since it is created in 3D using `three.js` and the resultant loader is the 3D model.
+
+> `size`, `desktopSize` and `mobileSize` attributes are defined relative to `64px` for all loaders and it doesn't mean the actual size would be `64px`. It means all the sizes defined will be w.r.t `64px`. If you pass `128px` then the size doubles. Also, note that if one of the `desktopSize` and `mobileSize` is not defined, then it will use the `size` attribute. Value defined in `size` attribute is assigned for mobile devices and loader automatically doubles the size on desktop device.
+
+<p align="center" style="font-size:13px;margin-top:20px;">❤️ Inspired from <a href="https://codepen.io/aaroniker/pen/pMedQJ">codepen</a> by <a href="https://dribbble.com/ai">Aaron Iker</a></p>

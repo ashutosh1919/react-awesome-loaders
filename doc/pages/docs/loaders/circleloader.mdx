@@ -1,0 +1,50 @@
+---
+title: Circle Loader
+section: Loaders
+---
+
+import {Loader} from '../code/loader.js'
+
+# Circle Loader
+Loader with 3D circle compaction-expansion effect 
+
+## Usage
+<Loader name="CircleLoader" />
+
+```js highlight={1,5-11}
+import { CircleLoader } from 'react-awesome-loaders'
+export const CircleLoaderComponent = () => {
+    return (
+        <>
+            <CircleLoader
+                meshColor={"#6366F1"}
+                lightColor={"#E0E7FF"}
+                duration={1.5}
+                desktopSize={"90px"}
+                mobileSize={"64px"}
+            />
+        </>
+    )
+}
+```
+
+## Parameters
+Below are the parameters for **BoxesLoader** that you can customize.  
+
+| Option                | Description                                    | Type   | Default        |
+| --------------------- | ---------------------------------------------- | ------ | -------------- |
+| **className**         | `class` attribute for loader                   | String | `circleloader` |
+| **meshColor**         | Color of the circles                           | String | `#6366F1`      |
+| **lightColor**        | Color of the light dropping on circular meshes | String | `#FFFFFF`      |
+| **lightIntensity**    | Intensity of the light dropping on meshes      | Number | `0.4`          |
+| **ambientLightColor** | Color of ambient light                         | String | `#E8EBFB`      |
+| **duration**          | Duration of animation                          | Number | `1`            |
+| **size**              | Size of the logo                               | String | `64px`         |
+| **desktopSize**       | Size of the logo on desktop                    | String | (empty)        |
+| **mobileSize**        | Size of the logo on mobile                     | String | (empty)        |
+
+Some of the color parameters like `lightColor`, `lightIntensity`, `ambientLightColor` are added for this loader since it is created in 3D using `three.js` and the resultant loader is the 3D model.
+
+> `size`, `desktopSize` and `mobileSize` attributes are defined relative to `64px` for all loaders and it doesn't mean the actual size would be `64px`. It means all the sizes defined will be w.r.t `64px`. If you pass `128px` then the size doubles. Also, note that if one of the `desktopSize` and `mobileSize` is not defined, then it will use the `size` attribute. Value defined in `size` attribute is assigned for mobile devices and loader automatically doubles the size on desktop device.
+
+<p align="center" style="font-size:13px;margin-top:20px;">❤️ Inspired from <a href="https://codepen.io/aaroniker/pen/bGGMNPd">codepen</a> by <a href="https://dribbble.com/ai">Aaron Iker</a></p>

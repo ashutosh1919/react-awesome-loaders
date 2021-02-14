@@ -1,0 +1,62 @@
+---
+title: Getting Started
+section: Introduction
+order: 1
+---
+import AwesomeLoaders from './code/rug'
+import GettingStarted from '../../partials/getting-started.mdx';
+
+# Overview  
+Getting started with &zwnj;<AwesomeLoaders/>
+
+## What is React Awesome Loaders?  
+&zwnj;<AwesomeLoaders/> is an NPM package `react-awesome-loaders` which lets you create high-quality, super-responsive and customizable loading animations to insert into your website.
+
+## Why I created it?
+As the owner of UI projects like [MasterPortfolio](https://github.com/ashutosh1919/masterPortfolio) and [React LiquidSwipe](https://github.com/ashutosh1919/react-liquidswipe), I understand the importance of animations on frontend, especially the loading animations.  
+
+I get many questions from beginners in frontend about how to create awesome loading animations or is any loading animation library available. 
+
+The concept of &zwnj;<AwesomeLoaders/> is born with an idea to provide code snippets of code to beginners so that they can implement extra-ordinary loading animations in their frontend work.  
+
+Effectiveness of `styled-components` and power of **CSS in JS** has made it more compact as well as reusable. Because of that, I was able to publish it as an NPM package instead of just code snippets.
+
+## What are the differences with other loading animation packages?
+&zwnj;<AwesomeLoaders/> is opinionated, it generates a pro-quality loading animations which are completely customizable and auto-responsive.  
+
+It includes many features:
+
+- Works with any web framework
+- Color Customization
+- Size Customization
+- Auto responsive (If `desktopSize` and `mobileSize` is not specified)
+- Awesome performance & scalability
+- Extra-ordinary 3D animations
+- Use of diverse & most efficient packages (while creating)
+- ..and many other features!  
+
+All of these features make &zwnj;<AwesomeLoaders/> the most advanced loading animation package.  
+
+<GettingStarted />  
+
+## Personalize options  
+Customization parameters are passed as props to particular loader in the package.  
+
+```jsx highlight={1,6-10}
+import { LoaderName } from "react-awesome-loaders"
+...
+function LoadingComponent(props) {
+    return (
+        ...
+        <LoaderName 
+            className={'myloader'}
+            desktopSize={'128px'} 
+            mobileSize={'64px'}
+        />
+        ...
+    );
+}
+export default LoadingComponent
+```  
+
+You can look at the corresponding loader documentation on this website to see what parameters can be customized.

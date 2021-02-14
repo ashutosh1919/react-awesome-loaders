@@ -1,0 +1,47 @@
+---
+title: Scatter Box Loader
+section: Loaders
+---
+
+import {Loader} from '../code/loader.js'
+
+# Scatter Box Loader
+Loader with effect of aggregating scatter box particles
+
+## Usage
+<Loader name="ScatterBoxLoader" />
+
+```js highlight={1,5-8}
+import { ScatterBoxLoader } from 'react-awesome-loaders'
+export const ScatterBoxLoaderComponent = () => {
+    return (
+        <>
+            <ScatterBoxLoader
+                primaryColor={"#6366F1"}
+                background={theme.colors["background"]} 
+            />
+        </>
+    )
+}
+```
+
+## Parameters
+Below are the parameters for **ScatterBoxLoader** that you can customize.  
+
+| Option           | Description                    | Type   | Default            |
+| ---------------- | ------------------------------ | ------ | ------------------ |
+| **className**    | `class` attribute for loader   | String | `scatterboxloader` |
+| **background**   | Background color of the loader | String | `#FFFFFF`          |
+| **primaryColor** | Color of the boxes             | String | `#2f71ff`          |
+| **duration**     | Duration of animation          | Number | `5`                |
+| **size**         | Size of the logo               | String | `64px`             |
+| **desktopSize**  | Size of the logo on desktop    | String | (empty)            |
+| **mobileSize**   | Size of the logo on mobile     | String | (empty)            |
+
+This is the only loader which is loosely written and is not auto-responsive. The parameters `size`, `desktopSize` and `mobileSize` will not change the size of loader at this time. Contributions are welcome.  
+
+`background` is not set as `transparent` here because if we do that, then the box will just cross the surface and will still be visible and we won't be able to see the burying effect of box. Hence, you need to explicitly define the background color and if you are using any theming library like `styled-components`, `theme-ui` or `emotion`, then you need to pass dynamic argument as shown in above example.  
+
+The above explained limitations of this loader is because of its implementation in `css`. Creating responsiveness and dynamicity using `css` is very difficult, this is the prime example for that.
+
+<p align="center" style="font-size:13px;margin-top:20px;">❤️ Inspired from <a href="https://codepen.io/aaroniker/pen/MWgRBdV">codepen</a> by <a href="https://dribbble.com/ai">Aaron Iker</a></p>

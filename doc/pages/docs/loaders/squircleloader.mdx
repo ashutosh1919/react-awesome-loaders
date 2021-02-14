@@ -1,0 +1,40 @@
+---
+title: Squircle Loader
+section: Loaders
+---
+
+import {Loader} from '../code/loader.js'
+
+# Squircle Loader
+Loader with rotating cylinder effect 
+
+## Usage
+<Loader name="SquircleLoader" />
+
+```js highlight={1,5}
+import { SquircleLoader } from 'react-awesome-loaders'
+export const SquircleLoaderComponent = () => {
+    return (
+        <>
+            <SquircleLoader />
+        </>
+    )
+}
+```
+
+## Parameters
+Below are the parameters for **SquircleLoader** that you can customize.  
+
+| Option             | Description                         | Type   | Default          |
+| ------------------ | ----------------------------------- | ------ | ---------------- |
+| **className**      | `class` attribute for loader        | String | `squircleloader` |
+| **color**          | Primary color of cylinder           | String | `#EF4444`        |
+| **backfaceColor**  | Color of back face of cylinder      | String | `#4F46E5`        |
+| **alternateColor** | Color of alternate face of cylinder | String | `#10B981`        |
+| **size**           | Size of the logo                    | String | `64px`           |
+| **desktopSize**    | Size of the logo on desktop         | String | (empty)          |
+| **mobileSize**     | Size of the logo on mobile          | String | (empty)          |
+
+> `size`, `desktopSize` and `mobileSize` attributes are defined relative to `64px` for all loaders and it doesn't mean the actual size would be `64px`. It means all the sizes defined will be w.r.t `64px`. If you pass `128px` then the size doubles. Also, note that if one of the `desktopSize` and `mobileSize` is not defined, then it will use the `size` attribute. Value defined in `size` attribute is assigned for mobile devices and loader automatically doubles the size on desktop device.
+
+<p align="center" style="font-size:13px;margin-top:20px;">❤️ Inspired from <a href="https://codepen.io/chrisgannon/pen/YzqgRvG">codepen</a> by <a href="https://codepen.io/chrisgannon">Chris Gannon</a></p>

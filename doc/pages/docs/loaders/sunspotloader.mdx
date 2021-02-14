@@ -1,0 +1,48 @@
+---
+title: Sunspot Loader
+section: Loaders
+---
+
+import {Loader} from '../code/loader.js'
+
+# Sunspot Loader
+Loader with rotating spot effect 
+
+## Usage
+<Loader name="SunspotLoader" />
+
+```js highlight={1,5-10}
+import { SunspotLoader } from 'react-awesome-loaders'
+export const SunspotLoaderComponent = () => {
+    return (
+        <>
+            <SunspotLoader
+                gradientColors={["#6366F1", "#E0E7FF"]}
+                shadowColor={"#3730A3"}
+                desktopSize={"128px"}
+                mobileSize={"100px"} 
+            />
+        </>
+    )
+}
+```
+
+## Parameters
+Below are the parameters for **SunspotLoader** that you can customize.  
+
+| Option             | Description                   | Type   | Default                  |
+| ------------------ | ----------------------------- | ------ | ------------------------ |
+| **className**      | `class` attribute for loader  | String | `sunspotloader`          |
+| **background**     | Background color of the boxes | String | `transparent`            |
+| **gradientColors** | Two colors of the spot        | Array  | `["#FF4F59", "#FFFC31"]` |
+| **shadowColor**    | Color of the shadow           | String | `#5B1E00`                |
+| **shadowOpacity**  | Opacity of shadow             | String | `0.05`                   |
+| **size**           | Size of the logo              | String | `64px`                   |
+| **desktopSize**    | Size of the logo on desktop   | String | (empty)                  |
+| **mobileSize**     | Size of the logo on mobile    | String | (empty)                  |
+
+You can pass one or two colors to `gradientColors`. If there is only one color, then the spot will be in single color. Also, if the colors are more than two, then it will only take first two colors.
+
+> `size`, `desktopSize` and `mobileSize` attributes are defined relative to `64px` for all loaders and it doesn't mean the actual size would be `64px`. It means all the sizes defined will be w.r.t `64px`. If you pass `128px` then the size doubles. Also, note that if one of the `desktopSize` and `mobileSize` is not defined, then it will use the `size` attribute. Value defined in `size` attribute is assigned for mobile devices and loader automatically doubles the size on desktop device.
+
+<p align="center" style="font-size:13px;margin-top:20px;">❤️ Inspired from <a href="https://codepen.io/chrisgannon/pen/vYGozeN">codepen</a> by <a href="https://codepen.io/chrisgannon">Chris Gannon</a></p>

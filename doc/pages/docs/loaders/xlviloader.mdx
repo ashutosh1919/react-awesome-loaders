@@ -1,0 +1,45 @@
+---
+title: XLVI Loader
+section: Loaders
+---
+
+import {Loader} from '../code/loader.js'
+
+# XLVI Loader
+Loader with infite shape following effect 
+
+## Usage
+<Loader name="XlviLoader" />
+
+```js highlight={1,5-9}
+import { XlviLoader } from 'react-awesome-loaders'
+export const XlviLoaderComponent = () => {
+    return (
+        <>
+            <XlviLoader
+                boxColors={['#EF4444', '#F59E0B', '#6366F1']}
+                desktopSize={"128px"}
+                mobileSize={"100px"}
+            />
+        </>
+    )
+}
+```
+
+## Parameters
+Below are the parameters for **XlviLoader** that you can customize.  
+
+| Option          | Description                  | Type   | Default       |
+| --------------- | ---------------------------- | ------ | ------------- |
+| **className**   | `class` attribute for loader | String | `xlviloader`  |
+| **backgound**   | Background color of loader   | String | `transparent` |
+| **boxColors**   | Colors of the boxes          | Array  | `["#333"]`    |
+| **size**        | Size of the logo             | String | `64px`        |
+| **desktopSize** | Size of the logo on desktop  | String | (empty)       |
+| **mobileSize**  | Size of the logo on mobile   | String | (empty)       |
+
+You can pass one, two or three colors to `boxColors`. If there is only one color, then all boxes will be in single color. If there are two colors, then the second color will be repeated. Also, if the colors are more than three, then it will only take first three colors.
+
+> `size`, `desktopSize` and `mobileSize` attributes are defined relative to `64px` for all loaders and it doesn't mean the actual size would be `64px`. It means all the sizes defined will be w.r.t `64px`. If you pass `128px` then the size doubles. Also, note that if one of the `desktopSize` and `mobileSize` is not defined, then it will use the `size` attribute. Value defined in `size` attribute is assigned for mobile devices and loader automatically doubles the size on desktop device.
+
+<p align="center" style="font-size:13px;margin-top:20px;">❤️ Inspired from <a href="https://codepen.io/Volorf/pen/ZVVVgM">codepen</a> by <a href="https://dribbble.com/Volorf">Oleg Frolov</a></p>

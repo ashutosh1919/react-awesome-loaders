@@ -1,0 +1,17 @@
+.easter {
+    display: inline-block;
+    position: relative;
+    cursor: grab;
+    touch-action: none;
+  }
+  
+.loader {
+  display: flex;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 50px !important;
+  background: #ff0000 !important;
+}

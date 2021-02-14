@@ -1,43 +1,23 @@
 module.exports = {
   siteMetadata: {
-    title: "react-loaders",
+    title: "React Awesome Loaders",
+    description: "Awesome Loading animations",
+    author: "Ashutosh Hathidara",
+    sections: ['Introduction', 'Loaders', 'More'],
+    navItems: [
+      { title: 'Docs', url: '/docs/' },
+    ],
+    twitterAccount: 'ashutosh_1919',
+    githubRepositoryURL: 'https://github.com/ashutosh1919/react-awesome-loaders',
   },
   plugins: [
-    "gatsby-plugin-theme-ui",
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: "smooth-doc",
       options: {
-        trackingId: "UA-158726526-1",
+        name: "Smooth DOC Starter",
+        description: "Use your own description...",
+        siteUrl: "http://localhost:8000",
       },
-    },
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    "gatsby-plugin-offline",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        icon: "src/images/icon.png",
-      },
-    },
-    "gatsby-transformer-remark",
-    "gatsby-plugin-mdx",
-    "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "./src/images/",
-      },
-      __key: "images",
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
-        path: "./src/pages/",
-      },
-      __key: "pages",
     },
   ],
 };

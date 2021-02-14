@@ -1,44 +1,26 @@
 {
-  "name": "react-loaders",
-  "version": "1.0.0",
+  "name": "smooth-doc-starter",
+  "version": "0.0.0",
   "private": true,
-  "description": "react-loaders",
-  "author": "ashutosh1919",
-  "keywords": [
-    "gatsby"
-  ],
   "scripts": {
     "develop": "gatsby develop",
-    "start": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "serve": "gatsby serve"
   },
-  "license": "0BSD",
   "dependencies": {
-    "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
-    "@theme-ui/presets": "^0.3.5",
-    "emotion": "^11.0.0",
-    "gatsby": "^2.26.1",
-    "gatsby-image": "^2.8.0",
-    "gatsby-plugin-google-analytics": "^2.8.0",
-    "gatsby-plugin-manifest": "^2.9.1",
-    "gatsby-plugin-mdx": "^1.7.1",
-    "gatsby-plugin-offline": "^3.7.1",
-    "gatsby-plugin-react-helmet": "^3.7.0",
-    "gatsby-plugin-sharp": "^2.11.2",
-    "gatsby-plugin-sitemap": "^2.9.0",
-    "gatsby-plugin-theme-ui": "^0.3.5",
-    "gatsby-source-filesystem": "^2.8.1",
-    "gatsby-transformer-remark": "^2.13.1",
-    "gatsby-transformer-sharp": "^2.9.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0",
-    "react-responsive": "^8.2.0",
-    "react-spring": "^8.0.27",
-    "react-use-gesture": "^9.0.0",
-    "theme-ui": "^0.3.5"
+    "@xstyled/styled-components": "^2.2.2",
+    "gatsby": "^2.15.18",
+    "parse-numeric-range": "^1.2.0",
+    "prism-react-renderer": "^1.1.1",
+    "react": "^16.10.1",
+    "react-awesome-loaders": "^0.1.35",
+    "react-dom": "^16.10.1",
+    "react-live": "^2.2.3",
+    "react-player": "^2.8.2",
+    "react-spring": "^9.0.0-rc.2",
+    "react-use-gesture": "^9.0.1",
+    "smooth-doc": "^5.0.4",
+    "styled-components": "^5.2.1"
   }
 }

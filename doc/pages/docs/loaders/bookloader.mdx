@@ -1,0 +1,49 @@
+---
+title: Book Loader
+section: Loaders
+---
+
+import {Loader} from '../code/loader.js'
+
+# Book Loader
+Loader with effect of folding pages of book 
+
+## Usage
+<Loader name="BookLoader" />
+
+```js highlight={1,5-10}
+import { BookLoader } from 'react-awesome-loaders'
+export const BookLoaderComponent = () => {
+    return (
+        <>
+            <BookLoader
+                background={"linear-gradient(135deg, #6066FA, #4645F6)"}
+                desktopSize={"100px"}
+                mobileSize={"80px"}
+                textColor={"#4645F6"}
+            />
+        </>
+    )
+}
+```
+
+## Parameters
+Below are the parameters for **BookLoader** that you can customize.  
+
+| Option            | Description                          | Type   | Default                                     |
+| ----------------- | ------------------------------------ | ------ | ------------------------------------------- |
+| **className**     | `class` attribute for loader         | String | `bookloader`                                |
+| **text**          | Text to be displayed under animation | String | `Loading...`                                |
+| **background**    | Background color of the loader       | String | `linear-gradient(135deg, #23c4f8, #275efe)` |
+| **shadowColor**   | Color of the book shadow             | String | `rgba(39, 94, 254, .28)`                    |
+| **textColor**     | Color of the text displayed          | String | `#6c7486`                                   |
+| **pageColor**     | Color od the pages                   | String | `rgba(255, 255, 255, .36)`                  |
+| **foldPageColor** | Color of the page when folded        | String | `rgba(255, 255, 255, .52)`                  |
+| **duration**      | Duration of animation                | String | `3s`                                        |
+| **size**          | Size of the logo                     | String | `64px`                                      |
+| **desktopSize**   | Size of the logo on desktop          | String | (empty)                                     |
+| **mobileSize**    | Size of the logo on mobile           | String | (empty)                                     |
+
+> `size`, `desktopSize` and `mobileSize` attributes are defined relative to `64px` for all loaders and it doesn't mean the actual size would be `64px`. It means all the sizes defined will be w.r.t `64px`. If you pass `128px` then the size doubles. Also, note that if one of the `desktopSize` and `mobileSize` is not defined, then it will use the `size` attribute. Value defined in `size` attribute is assigned for mobile devices and loader automatically doubles the size on desktop device.
+
+<p align="center" style="font-size:13px;margin-top:20px;">❤️ Inspired from <a href="https://codepen.io/aaroniker/pen/wvvKKeg">codepen</a> by <a href="https://dribbble.com/ai">Aaron Iker</a></p>
