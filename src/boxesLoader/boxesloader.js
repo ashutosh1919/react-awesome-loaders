@@ -23,6 +23,7 @@ width: calc(var(--size) * 3);
 position: relative;
 transform-style: preserve-3d;
 transform-origin: 50% 50%;
+margin-bottom: ${props => props.sizeMarginBottom}px;
 // margin-top: calc(var(--size) * 1.5 * -1);
 padding: 70px;
 transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
@@ -130,6 +131,7 @@ const BoxesLoader = ({
 
     let sizePassed = parseFloat(sizeFound);
     let sizeBoxes = (sizePassed * 32)/64;
+    let sizeMarginBottom = (sizePassed * 50)/64;
 
     const boxRightColor = darken(0.15, boxColor);
     const boxLeftColor = darken(0.05, boxColor);
@@ -210,7 +212,7 @@ const BoxesLoader = ({
     ]
 
   return (
-    <Container duration={duration} sizeBoxes={sizeBoxes} className={className}>
+    <Container sizeMarginBottom={sizeMarginBottom} duration={duration} sizeBoxes={sizeBoxes} className={className}>
       <StyledBox duration={duration} colors={colors} sizeBoxes={sizeBoxes} animParams={animParams[0]} boxTransforms={boxTransforms[0]}>
         <StyledBoxDiv boxDivParams={boxDivParams[0]}></StyledBoxDiv>
         <StyledBoxDiv boxDivParams={boxDivParams[1]}></StyledBoxDiv>

@@ -1,6 +1,6 @@
 {
   "name": "react-awesome-loaders",
-  "version": "0.1.30",
+  "version": "0.1.35",
   "description": "High quality, super responsive and completely customisable Loading Animations to insert into your website with single line of code.",
   "main": "./lib/index.js",
   "dependencies": {
@@ -13,8 +13,6 @@
     "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
     "polished": "^4.0.5",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
     "react-responsive": "^8.2.0",
     "react-scripts": "4.0.1",
     "styled-components": "^5.2.1",

@@ -99,7 +99,7 @@ animation: ${AnimGround} var(--duration) linear forwards infinite;
 :before , :after {
     --rx: 90deg;
     --ry: 0deg;
-    --x: 100px;
+    --x: 44px;
     --y: 162px;
     --z: -50px;
     content: '';
@@ -114,9 +114,9 @@ animation: ${AnimGround} var(--duration) linear forwards infinite;
 :after {
     --rx: 90deg;
     --ry: 90deg;
-    --x: 56px;
-    --y: 162px;
-    --z: -50px;
+    --x: 0;
+    --y: 177px;
+    --z: 150px;
 }
 `;
 
@@ -148,7 +148,7 @@ transform: translate(var(--x), var(--y));
     --ry: 0deg;
     --z: 24px;
     --y: -24px;
-    --x: -24px;
+    --x: 0;
     content: '';
     position: absolute;
     background-color: inherit;
@@ -160,9 +160,8 @@ transform: translate(var(--x), var(--y));
 & > div:after {
     --rx: 0deg;
     --ry: 90deg;
-    --z: 0;
     --x: 24px;
-    --y: 0px;
+    --y: 0;
     --b: 1.4;
 }
 `;
