@@ -29,3 +29,81 @@
     <img src="doc/images/showcase.gif"></img>
   </a>
 </p>
+
+:star: Star us on GitHub — it helps!  
+To view a documentation website, [click here](https://awesome-loaders.netlify.app/)
+
+# Getting Started 🎬
+
+The easiest way to use one of the loaders from **Awesome Loaders** is to install the NPM package and import the particular loader to use it.
+
+## Install NPM Package
+
+```bash
+npm install react-awesome-loaders
+```
+
+## Import And Use
+
+```jsx highlight={1,6}
+import { LoaderName } from "react-awesome-loaders"
+...
+function LoadingComponent(props) {
+    return (
+        ...
+        <LoaderName {...passParametersToCustomise} />
+        ...
+    );
+}
+export default LoadingComponent
+```
+
+The loaders are very flexible to import and use wherever you want and in any web framework that uses NPM.  
+The loaders are auto-responsive. i.e. The size of loader automatically adjusts itself on smaller screen sizes.  
+Ofcourse, you can set different sizes for different screens by passing props `desktopSize` and `mobileSize`.
+
+# License 📄
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/ashutosh1919/react-awesome-loaders/blob/main/LICENSE) file for details.
+You can use this project for personal as well as commercial purposes. But if you think you have modified the project and built something really good, we will humbly request you to raise the pull request and share with the opensource community.
+
+# Contributing 💡
+
+We have provided detailed description on how & what to contribute to this project on [website](https://awesome-loaders.netlify.app/docs/contributing/). Please, take a look.
+
+If you can help us with these. Please don't hesitate to open an [pull request](https://github.com/ashutosh1919/react-awesome-loaders/pulls) or [issue](https://github.com/ashutosh1919/react-awesome-loaders/issues). If you want to know about how to create pull request, then please refer to [this youtube playlist](https://youtube.com/playlist?list=PLR0CKdeR_FyscaxEksDVXc4UQvlOFLYS6).
+
+# Donate 💉
+
+I open-source almost everything I can, and I try to reply to everyone needing help using these projects. Obviously, this takes time. You can use this project for personal and commercial purpose for free.
+
+However, if you are using this project and happy with it or just want to encourage me to continue creating stuff, there are few ways you can do it :-
+
+- Giving proper credit when you use this on your project, linking back to it :D
+- Starring and sharing the project 🚀
+- You can make one-time donations by clicking the buttons below. I'll probably buy an amazing workstation which will help me build more aggressively.
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/paypalme/devsense19) <a href="https://www.buymeacoffee.com/devsense19" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" height="50px" ></a>
+
+You can look at the [Appreciate](https://awesome-loaders.netlify.app/docs/appreciate/) page on website to know more about how you can help the project.
+
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/ashutosh1919"><img src="https://avatars.githubusercontent.com/u/20843596?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ashutosh Hathidara</b></sub></a><br /><a href="https://github.com/ashutosh1919/react-awesome-loaders/commits?author=ashutosh1919" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
