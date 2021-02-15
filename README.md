@@ -97,7 +97,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/ashutosh1919"><img src="https://avatars.githubusercontent.com/u/20843596?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ashutosh Hathidara</b></sub></a><br /><a href="https://github.com/ashutosh1919/react-awesome-loaders/commits?author=ashutosh1919" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/ashutosh1919"><img src="https://avatars.githubusercontent.com/u/20843596?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ashutosh Hathidara</b></sub></a><br /><a href="https://github.com/ashutosh1919/react-awesome-loaders/commits?author=ashutosh1919" title="Code">💻</a> <a href="https://github.com/ashutosh1919/react-awesome-loaders/commits?author=ashutosh1919" title="Documentation">📖</a></td>
   </tr>
 </table>
 
