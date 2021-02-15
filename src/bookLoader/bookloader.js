@@ -10,22 +10,24 @@ const ParentDiv = styled.div`
 `;
 
 const LoaderDiv = styled.div`
-  width: ${props => props.sizeParentWidth}px;
-  height: ${props => props.sizeParentHeight}px;
+  width: ${(props) => props.sizeParentWidth}px;
+  height: ${(props) => props.sizeParentHeight}px;
   position: relative;
   &:before {
     --r: -6deg;
     content: "";
     position: absolute;
-    width: ${props => props.sizeParentBeforeWidth}px;
-    box-shadow: 0 ${props => props.sizeParentShadow1}px ${props => props.sizeParentShadow2}px ${(props) => props.shadowColor};
+    width: ${(props) => props.sizeParentBeforeWidth}px;
+    box-shadow: 0 ${(props) => props.sizeParentShadow1}px
+      ${(props) => props.sizeParentShadow2}px ${(props) => props.shadowColor};
     transform: rotate(var(--r));
   }
   &:after {
     --r: -6deg;
     content: "";
     position: absolute;
-    box-shadow: 0 ${props => props.sizeParentShadow1}px ${props => props.sizeParentShadow2}px ${(props) => props.shadowColor};
+    box-shadow: 0 ${(props) => props.sizeParentShadow1}px
+      ${(props) => props.sizeParentShadow2}px ${(props) => props.shadowColor};
     transform: rotate(var(--r));
     --r: 6deg;
   }
@@ -34,7 +36,7 @@ const LoaderDiv = styled.div`
 const StyledDiv = styled.div`
   width: 100%;
   height: 100%;
-  border-radius: ${props => props.sizeDivBorderRadius}px;
+  border-radius: ${(props) => props.sizeDivBorderRadius}px;
   position: relative;
   z-index: 1;
   perspective: 600px;
@@ -50,8 +52,8 @@ const StyledUl = styled.ul`
 `;
 
 const StyledInnerSVG = styled.svg`
-  width: ${props => props.sizeSVGWidth}px;
-  height: ${props => props.sizeSVGHeight}px;
+  width: ${(props) => props.sizeSVGWidth}px;
+  height: ${(props) => props.sizeSVGHeight}px;
   display: block;
 `;
 
@@ -60,8 +62,8 @@ const StyledLi = styled.li`
   --o: 0;
   --c: ${(props) => props.pageColor};
   position: absolute;
-  top: ${props => props.sizeLi}px;
-  left: ${props => props.sizeLi}px;
+  top: ${(props) => props.sizeLi}px;
+  left: ${(props) => props.sizeLi}px;
   transform-origin: 100% 50%;
   color: var(--c);
   opacity: var(--o);
@@ -169,7 +171,7 @@ const StyledLi6 = styled(StyledLi)`
 const StyledSpan = styled.span`
   display: block;
   top: 100%;
-  font-size: ${props => props.sizeText}px;
+  font-size: ${(props) => props.sizeText}px;
   margin-top: 20px;
   text-align: center;
   color: ${(props) => props.textColor};
@@ -192,94 +194,142 @@ const BookLoader = ({
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
   var sizeFound = 0.0;
-    if(isDesktopOrLaptop){
-        if(desktopSize!=='')
-            sizeFound = parseFloat(desktopSize);
-        else
-            sizeFound = parseFloat(size)*2;
-    }
+  if (isDesktopOrLaptop) {
+    if (desktopSize !== "") sizeFound = parseFloat(desktopSize);
+    else sizeFound = parseFloat(size) * 2;
+  }
 
-    if(isTabletOrMobile){
-        if(mobileSize!=='')
-            sizeFound = parseFloat(mobileSize);
-        else
-            sizeFound = parseFloat(size);
-    }
+  if (isTabletOrMobile) {
+    if (mobileSize !== "") sizeFound = parseFloat(mobileSize);
+    else sizeFound = parseFloat(size);
+  }
 
-    var sizePassed = parseFloat(sizeFound);
-    var ratio = sizePassed / 64;
-    var sizeParentBeforeWidth = (sizePassed * 120)/64;
-    var sizeParentWidth = (sizePassed * 200)/64;
-    var sizeParentHeight = (sizePassed * 140)/64;
-    var sizeParentShadow1 = (sizePassed * 16)/64;
-    var sizeParentShadow2 = (sizePassed * 12)/64;
-    var sizeDivBorderRadius = (sizePassed * 13)/64;
-    var sizeLi = (sizePassed * 10)/64;
-    var sizeSVGWidth = (sizePassed * 90)/64;
-    var sizeSVGHeight = (sizePassed * 120)/64;
-    var sizeText = (ratio * 1.5 * 20)/2;
-    if(ratio===1){
-        sizeText = 14;
-    }
+  var sizePassed = parseFloat(sizeFound);
+  var ratio = sizePassed / 64;
+  var sizeParentBeforeWidth = (sizePassed * 120) / 64;
+  var sizeParentWidth = (sizePassed * 200) / 64;
+  var sizeParentHeight = (sizePassed * 140) / 64;
+  var sizeParentShadow1 = (sizePassed * 16) / 64;
+  var sizeParentShadow2 = (sizePassed * 12) / 64;
+  var sizeDivBorderRadius = (sizePassed * 13) / 64;
+  var sizeLi = (sizePassed * 10) / 64;
+  var sizeSVGWidth = (sizePassed * 90) / 64;
+  var sizeSVGHeight = (sizePassed * 120) / 64;
+  var sizeText = (ratio * 1.5 * 20) / 2;
+  if (ratio === 1) {
+    sizeText = 14;
+  }
 
   return (
     <ParentDiv className={className}>
-      <LoaderDiv sizeParentShadow1={sizeParentShadow1} sizeParentShadow2={sizeParentShadow2} sizeParentBeforeWidth={sizeParentBeforeWidth} sizeParentWidth={sizeParentWidth} sizeParentHeight={sizeParentHeight} shadowColor={shadowColor} className="loader">
-        <StyledDiv sizeDivBorderRadius={sizeDivBorderRadius} shadowColor={shadowColor} background={background}>
+      <LoaderDiv
+        sizeParentShadow1={sizeParentShadow1}
+        sizeParentShadow2={sizeParentShadow2}
+        sizeParentBeforeWidth={sizeParentBeforeWidth}
+        sizeParentWidth={sizeParentWidth}
+        sizeParentHeight={sizeParentHeight}
+        shadowColor={shadowColor}
+        className="loader"
+      >
+        <StyledDiv
+          sizeDivBorderRadius={sizeDivBorderRadius}
+          shadowColor={shadowColor}
+          background={background}
+        >
           <StyledUl>
-            <StyledLi1 sizeLi={sizeLi} pageColor={pageColor} duration={duration}>
-              <StyledInnerSVG sizeSVGWidth={sizeSVGWidth} sizeSVGHeight={sizeSVGHeight} viewBox="0 0 90 120" fill="currentColor">
+            <StyledLi1
+              sizeLi={sizeLi}
+              pageColor={pageColor}
+              duration={duration}
+            >
+              <StyledInnerSVG
+                sizeSVGWidth={sizeSVGWidth}
+                sizeSVGHeight={sizeSVGHeight}
+                viewBox="0 0 90 120"
+                fill="currentColor"
+              >
                 <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
               </StyledInnerSVG>
             </StyledLi1>
             <StyledLi2
-            sizeLi={sizeLi}
+              sizeLi={sizeLi}
               pageColor={pageColor}
               duration={duration}
               foldPageColor={foldPageColor}
             >
-              <StyledInnerSVG sizeSVGWidth={sizeSVGWidth} sizeSVGHeight={sizeSVGHeight} viewBox="0 0 90 120" fill="currentColor">
+              <StyledInnerSVG
+                sizeSVGWidth={sizeSVGWidth}
+                sizeSVGHeight={sizeSVGHeight}
+                viewBox="0 0 90 120"
+                fill="currentColor"
+              >
                 <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
               </StyledInnerSVG>
             </StyledLi2>
             <StyledLi3
-            sizeLi={sizeLi}
+              sizeLi={sizeLi}
               pageColor={pageColor}
               duration={duration}
               foldPageColor={foldPageColor}
             >
-              <StyledInnerSVG sizeSVGWidth={sizeSVGWidth} sizeSVGHeight={sizeSVGHeight} viewBox="0 0 90 120" fill="currentColor">
+              <StyledInnerSVG
+                sizeSVGWidth={sizeSVGWidth}
+                sizeSVGHeight={sizeSVGHeight}
+                viewBox="0 0 90 120"
+                fill="currentColor"
+              >
                 <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
               </StyledInnerSVG>
             </StyledLi3>
             <StyledLi4
-            sizeLi={sizeLi}
+              sizeLi={sizeLi}
               pageColor={pageColor}
               duration={duration}
               foldPageColor={foldPageColor}
             >
-              <StyledInnerSVG sizeSVGWidth={sizeSVGWidth} sizeSVGHeight={sizeSVGHeight} viewBox="0 0 90 120" fill="currentColor">
+              <StyledInnerSVG
+                sizeSVGWidth={sizeSVGWidth}
+                sizeSVGHeight={sizeSVGHeight}
+                viewBox="0 0 90 120"
+                fill="currentColor"
+              >
                 <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
               </StyledInnerSVG>
             </StyledLi4>
             <StyledLi5
-            sizeLi={sizeLi}
+              sizeLi={sizeLi}
               pageColor={pageColor}
               duration={duration}
               foldPageColor={foldPageColor}
             >
-              <StyledInnerSVG sizeSVGWidth={sizeSVGWidth} sizeSVGHeight={sizeSVGHeight} viewBox="0 0 90 120" fill="currentColor">
+              <StyledInnerSVG
+                sizeSVGWidth={sizeSVGWidth}
+                sizeSVGHeight={sizeSVGHeight}
+                viewBox="0 0 90 120"
+                fill="currentColor"
+              >
                 <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
               </StyledInnerSVG>
             </StyledLi5>
-            <StyledLi6 sizeLi={sizeLi} pageColor={pageColor} duration={duration}>
-              <StyledInnerSVG sizeSVGWidth={sizeSVGWidth} sizeSVGHeight={sizeSVGHeight} viewBox="0 0 90 120" fill="currentColor">
+            <StyledLi6
+              sizeLi={sizeLi}
+              pageColor={pageColor}
+              duration={duration}
+            >
+              <StyledInnerSVG
+                sizeSVGWidth={sizeSVGWidth}
+                sizeSVGHeight={sizeSVGHeight}
+                viewBox="0 0 90 120"
+                fill="currentColor"
+              >
                 <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
               </StyledInnerSVG>
             </StyledLi6>
           </StyledUl>
         </StyledDiv>
-        <StyledSpan sizeText={sizeText} textColor={textColor}>{text}</StyledSpan>
+        <StyledSpan sizeText={sizeText} textColor={textColor}>
+          {text}
+        </StyledSpan>
       </LoaderDiv>
     </ParentDiv>
   );

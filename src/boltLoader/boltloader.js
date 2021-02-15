@@ -5,11 +5,11 @@ import $ from "jquery";
 import { useMediaQuery } from "react-responsive";
 
 const ParentDiv = styled.div`
-  width: ${props => props.bolterWidth}px;
-  height: ${props => props.bolterHeight}px;
+  width: ${(props) => props.bolterWidth}px;
+  height: ${(props) => props.bolterHeight}px;
   position: relative;
   padding: 20px;
-  background: ${props => props.background};
+  background: ${(props) => props.background};
 `;
 
 const StyledSVG = styled.svg`
@@ -94,7 +94,7 @@ const StyledDiv = styled.div`
     width: 64px;
     height: 64px;
     margin: -32px 0 0 -32px;
-    background: ${props => props.backgroundBlurColor};
+    background: ${(props) => props.backgroundBlurColor};
     z-index: 1;
     filter: blur(60px);
   }
@@ -102,8 +102,8 @@ const StyledDiv = styled.div`
 
 const StyledSpan = styled.span`
   display: block;
-  width: ${props => props.bolterWidth}px;
-  height: ${props => props.bolterHeight}px;
+  width: ${(props) => props.bolterWidth}px;
+  height: ${(props) => props.bolterHeight}px;
   background: ${(props) => props.boltColor};
   clip-path: polygon(40% 0%, 100% 0, 65% 40%, 88% 40%, 8% 100%, 36% 50%, 0 50%);
 `;
@@ -117,26 +117,22 @@ const BoltLoader = ({
   desktopSize = ``,
   mobileSize = ``,
 }) => {
-    const isDesktopOrLaptop = useMediaQuery({ query: "(min-width: 1224px)" });
+  const isDesktopOrLaptop = useMediaQuery({ query: "(min-width: 1224px)" });
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
   let sizeFound = 0.0;
-    if(isDesktopOrLaptop){
-        if(desktopSize!=='')
-            sizeFound = parseFloat(desktopSize);
-        else
-            sizeFound = parseFloat(size)*2;
-    }
-    if(isTabletOrMobile){
-        if(mobileSize!=='')
-            sizeFound = parseFloat(mobileSize);
-        else
-            sizeFound = parseFloat(size);
-    }
+  if (isDesktopOrLaptop) {
+    if (desktopSize !== "") sizeFound = parseFloat(desktopSize);
+    else sizeFound = parseFloat(size) * 2;
+  }
+  if (isTabletOrMobile) {
+    if (mobileSize !== "") sizeFound = parseFloat(mobileSize);
+    else sizeFound = parseFloat(size);
+  }
 
-    let sizePassed = parseFloat(sizeFound);
-    let bolterWidth = (sizePassed * 63)/64;
-    let bolterHeight = (sizePassed * 93)/64;
+  let sizePassed = parseFloat(sizeFound);
+  let bolterWidth = (sizePassed * 63) / 64;
+  let bolterHeight = (sizePassed * 93) / 64;
 
   useEffect(() => {
     $("." + className).each(function (e) {
@@ -237,7 +233,12 @@ const BoltLoader = ({
             } 
     `}
       </style>
-      <ParentDiv className={className} background={background} bolterWidth={bolterWidth} bolterHeight={bolterHeight}>
+      <ParentDiv
+        className={className}
+        background={background}
+        bolterWidth={bolterWidth}
+        bolterHeight={bolterHeight}
+      >
         <StyledSVGWhiteLeft
           boltColor={boltColor}
           viewBox="0 0 170 57"
@@ -252,10 +253,14 @@ const BoltLoader = ({
         >
           <path d="M36.2701759,17.9733192 C-0.981139498,45.4810755 -7.86361824,57.6618438 15.6227397,54.5156241 C50.8522766,49.7962945 201.109341,31.1461782 161.361488,2"></path>
         </StyledSVGWhiteRight>
-        <StyledDiv className="boltloadersparkdiv" backgroundBlurColor={backgroundBlurColor}>
+        <StyledDiv
+          className="boltloadersparkdiv"
+          backgroundBlurColor={backgroundBlurColor}
+        >
           <StyledSpan
             boltColor={boltColor}
-            bolterWidth={bolterWidth} bolterHeight={bolterHeight}
+            bolterWidth={bolterWidth}
+            bolterHeight={bolterHeight}
             className="boltloadersparkdivspan"
           ></StyledSpan>
         </StyledDiv>

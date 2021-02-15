@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import styled, { down, css } from '@xstyled/styled-components'
+import React from "react";
+import { Link } from "gatsby";
+import styled, { down, css } from "@xstyled/styled-components";
 
 export const InnerSiblingNavLink = styled.aBox`
   display: flex;
@@ -27,43 +27,51 @@ export const InnerSiblingNavLink = styled.aBox`
     color: on-background-primary-dark;
     cursor: pointer;
   }
-  &[data-type='next'] {
+  &[data-type="next"] {
     justify-content: flex-end;
     span {
       margin: 0 4px 0 16px;
     }
   }
-  &[data-type='next']:hover {
+  &[data-type="next"]:hover {
     transform: translateX(2px);
   }
-  &[data-type='previous']:hover {
+  &[data-type="previous"]:hover {
     transform: translateX(-2px);
   }
-`
+`;
 
-export const SiblingNavLink = React.forwardRef(({ type, children, ...props }, ref) => {
-  return (
-    <InnerSiblingNavLink ref={ref} as={Link} data-type={type} gridArea={type} {...props}>
-      <span>{type === 'previous' && '← '}</span>
-      <div>
-        <p>{type === 'previous' ? 'Prev' : 'Next'}</p>
-        <h3>{children}</h3>
-      </div>
-      <span>{type === 'next' && ' →'}</span>
-    </InnerSiblingNavLink>
-  )
-})
+export const SiblingNavLink = React.forwardRef(
+  ({ type, children, ...props }, ref) => {
+    return (
+      <InnerSiblingNavLink
+        ref={ref}
+        as={Link}
+        data-type={type}
+        gridArea={type}
+        {...props}
+      >
+        <span>{type === "previous" && "← "}</span>
+        <div>
+          <p>{type === "previous" ? "Prev" : "Next"}</p>
+          <h3>{children}</h3>
+        </div>
+        <span>{type === "next" && " →"}</span>
+      </InnerSiblingNavLink>
+    );
+  }
+);
 
 export const SiblingNav = styled.navBox`
   display: grid;
-  grid-template-areas: 'previous next';
+  grid-template-areas: "previous next";
   justify-content: space-between;
   margin: 5 0;
   ${down(
-    'sm',
+    "sm",
     css`
       display: flex;
       flex-direction: column;
     `
   )}
-`
+`;

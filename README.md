@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">React Awesome Loaders</h1> 
-<h3 align="center"> 🚀 High quality, super responsive and completely customisable Loading Animations. </h3>
+<h3 align="center"> 🚀 High quality, super responsive and </br> completely customisable Loading Animations. </h3>
 
 <p align="center">
   <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fashutosh1919%2Freact-awesome-loaders&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
@@ -88,7 +88,6 @@ However, if you are using this project and happy with it or just want to encoura
 
 You can look at the [Appreciate](https://awesome-loaders.netlify.app/docs/appreciate/) page on website to know more about how you can help the project.
 
-
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -111,8 +110,8 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 # References 👏🏻
 
-We have used many of the amazing resources to create this project and it is difficult to display all those resources here on github repository.  
+We have used many of the amazing resources to create this project and it is difficult to display all those resources here on github repository.
 
-That is why we have displayed almost all used dependencies on our [website](https://awesome-loaders.netlify.app/docs/references/).  
+That is why we have displayed almost all used dependencies on our [website](https://awesome-loaders.netlify.app/docs/references/).
 
 Also, I have also mentioned the link and profile url of the original concept creators of the loaders at the bottom of corresponding loader documentation on website.

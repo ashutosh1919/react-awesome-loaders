@@ -3,17 +3,19 @@ body {
 }
 
 @font-face {
-    font-family: 'Atkinson Hyperlegible Bold';
-    font-style: normal;
-    font-weight: bold;
-    font-display: swap;
-    src: local('Atkinson Hyperlegible Bold'), url("Atkinson-Hyperlegible-Bold-102a.woff2") format("woff2");
-  }
+  font-family: "Atkinson Hyperlegible Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: local("Atkinson Hyperlegible Bold"),
+    url("Atkinson-Hyperlegible-Bold-102a.woff2") format("woff2");
+}
 
 @font-face {
-    font-family: 'Atkinson Hyperlegible Regular';
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-    src: local('Atkinson Hyperlegible Regular'), url("Atkinson-Hyperlegible-Regular-102a.woff2") format("woff2");
+  font-family: "Atkinson Hyperlegible Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local("Atkinson Hyperlegible Regular"),
+    url("Atkinson-Hyperlegible-Regular-102a.woff2") format("woff2");
 }

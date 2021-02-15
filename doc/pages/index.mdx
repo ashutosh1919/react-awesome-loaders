@@ -18,29 +18,26 @@ import {
   SiblingNav,
   SiblingNavLink,
 } from "smooth-doc/components";
-import GettingStarted from '../partials/getting-started.mdx' 
-import heroBackgroundImageURL from "../images/hero-background.png"
-import { RandomLoader } from "./docs/code/loader"
-import Title from './docs/code/title'
+import GettingStarted from "../partials/getting-started.mdx";
+import heroBackgroundImageURL from "../images/hero-background.png";
+import { RandomLoader } from "./docs/code/loader";
+import Title from "./docs/code/title";
 
-import compassImageURL from '../images/internal/compass.svg'
-import gameImageURL from '../images/internal/game.svg'
-import toolsImageURL from '../images/internal/tools.svg'
-
+import compassImageURL from "../images/internal/compass.svg";
+import gameImageURL from "../images/internal/game.svg";
+import toolsImageURL from "../images/internal/tools.svg";
 
 <HeroSection>
   <Hero>
     <HeroHalfContainer>
       <Title>Free & Open Source Loading Animations</Title>
-      <HeroTeaser>Create high-quality, super-responsive and  customizable
-                loading animations to insert into your website</HeroTeaser>
+      <HeroTeaser>
+        Create high-quality, super-responsive and customizable loading
+        animations to insert into your website
+      </HeroTeaser>
       <HeroActionList>
         <HeroAction>
-          <Button
-            variant="primary"
-            forwardedAs="a"
-            href="/docs/"
-          >
+          <Button variant="primary" forwardedAs="a" href="/docs/">
             Browse Docs
           </Button>
         </HeroAction>
@@ -82,22 +79,25 @@ import toolsImageURL from '../images/internal/tools.svg'
     <Feature col={{ xs: 1, md: 1 / 3 }}>
       <FeatureImage src={toolsImageURL} width={100} height={100} />
       <FeatureTitle>Loading made simple</FeatureTitle>
-      <FeatureText style={{ textAlign: 'left' }}>
-        Awesome Loaders allows you to implement complex loading animations with just few lines of code.
+      <FeatureText style={{ textAlign: "left" }}>
+        Awesome Loaders allows you to implement complex loading animations with
+        just few lines of code.
       </FeatureText>
     </Feature>
     <Feature col={{ xs: 1, md: 1 / 3 }}>
       <FeatureImage src={compassImageURL} width={100} height={100} />
       <FeatureTitle>Configurable to your needs</FeatureTitle>
-      <FeatureText style={{ textAlign: 'left' }}>
-        Animations can be customized with advanced options like colors, sizes and responsiveness.
+      <FeatureText style={{ textAlign: "left" }}>
+        Animations can be customized with advanced options like colors, sizes
+        and responsiveness.
       </FeatureText>
     </Feature>
     <Feature col={{ xs: 1, md: 1 / 3 }}>
       <FeatureImage src={gameImageURL} width={100} height={100} />
       <FeatureTitle>Plays well with any web framework</FeatureTitle>
-      <FeatureText style={{ textAlign: 'left' }}>
-        All animations will work on any web framework that renders the page based on components.
+      <FeatureText style={{ textAlign: "left" }}>
+        All animations will work on any web framework that renders the page
+        based on components.
       </FeatureText>
     </Feature>
   </FeatureList>
@@ -117,14 +117,26 @@ import toolsImageURL from '../images/internal/tools.svg'
 <footer>
   <ScreenContainer>
     <div>
-      © {new Date().getFullYear()} by{' '}
-      <a href="http://ashutoshhathidara.com/" target="_blank" rel="noopener noreferrer">
+      © {new Date().getFullYear()} by{" "}
+      <a
+        href="http://ashutoshhathidara.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <strong>Ashutosh Hathidara</strong>
       </a>
       . All rights reserved.
     </div>
     <div>
-      This website is open source on <a href="https://github.com/ashutosh1919/react-awesome-loaders/tree/main/doc" target="_blank" rel="noopener noreferrer">GitHub</a>.
+      This website is open source on{" "}
+      <a
+        href="https://github.com/ashutosh1919/react-awesome-loaders/tree/main/doc"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+      .
     </div>
   </ScreenContainer>
 </footer>

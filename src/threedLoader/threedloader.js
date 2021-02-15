@@ -10,8 +10,8 @@ const Container = styled.div`
 `;
 
 const StyledCanvas = styled.canvas`
-  width: ${props => props.sizeCanvas}px;
-  height: ${props => props.sizeCanvas}px;
+  width: ${(props) => props.sizeCanvas}px;
+  height: ${(props) => props.sizeCanvas}px;
 `;
 
 const ThreeDLoader = ({
@@ -24,25 +24,21 @@ const ThreeDLoader = ({
   desktopSize = ``,
   mobileSize = ``,
 }) => {
-    const isDesktopOrLaptop = useMediaQuery({ query: "(min-width: 1224px)" });
+  const isDesktopOrLaptop = useMediaQuery({ query: "(min-width: 1224px)" });
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
   let sizeFound = 0.0;
-    if(isDesktopOrLaptop){
-        if(desktopSize!=='')
-            sizeFound = parseFloat(desktopSize);
-        else
-            sizeFound = parseFloat(size)*2;
-    }
-    if(isTabletOrMobile){
-        if(mobileSize!=='')
-            sizeFound = parseFloat(mobileSize);
-        else
-            sizeFound = parseFloat(size);
-    }
+  if (isDesktopOrLaptop) {
+    if (desktopSize !== "") sizeFound = parseFloat(desktopSize);
+    else sizeFound = parseFloat(size) * 2;
+  }
+  if (isTabletOrMobile) {
+    if (mobileSize !== "") sizeFound = parseFloat(mobileSize);
+    else sizeFound = parseFloat(size);
+  }
 
-    let sizePassed = parseFloat(sizeFound);
-    let sizeCanvas = (sizePassed * 240)/64;
+  let sizePassed = parseFloat(sizeFound);
+  let sizeCanvas = (sizePassed * 240) / 64;
 
   useEffect(() => {
     $(document).ready(function () {
@@ -142,7 +138,10 @@ const ThreeDLoader = ({
 
   return (
     <Container className={className}>
-      <StyledCanvas sizeCanvas={sizeCanvas} className="threed-loader-canvas"></StyledCanvas>
+      <StyledCanvas
+        sizeCanvas={sizeCanvas}
+        className="threed-loader-canvas"
+      ></StyledCanvas>
     </Container>
   );
 };

@@ -40,7 +40,10 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.24.1",
+    "husky": "^5.0.9",
+    "lint-staged": "^10.5.4",
     "path": "^0.12.7",
+    "prettier": "^2.2.1",
     "prop-types": "^15.6.0",
     "regenerator-runtime": "^0.13.7",
     "webpack": "^4.5.0",
@@ -102,6 +105,14 @@
     "react-css-loading-animations",
     "progress-bar"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{json,js,css,md}": "prettier --write"
+  },
   "author": "ashutosh1919",
   "license": "MIT",
   "bugs": {

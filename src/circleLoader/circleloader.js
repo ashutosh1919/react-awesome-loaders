@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import * as THREE from "three";
-import {gsap} from 'gsap';
+import { gsap } from "gsap";
 import { useMediaQuery } from "react-responsive";
 
 const CircleLoader = ({
@@ -14,32 +14,28 @@ const CircleLoader = ({
   desktopSize = ``,
   mobileSize = ``,
 }) => {
-    const isDesktopOrLaptop = useMediaQuery({ query: "(min-width: 1224px)" });
+  const isDesktopOrLaptop = useMediaQuery({ query: "(min-width: 1224px)" });
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
   let sizeFound = 0.0;
-    if(isDesktopOrLaptop){
-        if(desktopSize!=='')
-            sizeFound = parseFloat(desktopSize);
-        else
-            sizeFound = parseFloat(size)*2;
-    }
-    if(isTabletOrMobile){
-        if(mobileSize!=='')
-            sizeFound = parseFloat(mobileSize);
-        else
-            sizeFound = parseFloat(size);
-    }
+  if (isDesktopOrLaptop) {
+    if (desktopSize !== "") sizeFound = parseFloat(desktopSize);
+    else sizeFound = parseFloat(size) * 2;
+  }
+  if (isTabletOrMobile) {
+    if (mobileSize !== "") sizeFound = parseFloat(mobileSize);
+    else sizeFound = parseFloat(size);
+  }
 
-    let sizePassed = parseFloat(sizeFound);
-    let sizeCanvas = (sizePassed * 220)/64;
+  let sizePassed = parseFloat(sizeFound);
+  let sizeCanvas = (sizePassed * 220) / 64;
 
   useEffect(() => {
     const $ = (s, o = document) => o.querySelector(s);
 
     let width = sizeCanvas,
       height = sizeCanvas,
-      canvas = $("."+className),
+      canvas = $("." + className),
       renderer = new THREE.WebGLRenderer({
         canvas: canvas,
         context: canvas.getContext("webgl2"),

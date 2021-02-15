@@ -1,5 +1,4 @@
-
-import styled from '@xstyled/styled-components'
+import styled from "@xstyled/styled-components";
 
 export const ScreenContainer = styled.box`
   width: 100%;
@@ -7,4 +6,4 @@ export const ScreenContainer = styled.box`
   margin: 0 auto;
   padding-left: 3;
   padding-right: 3;
-`
+`;

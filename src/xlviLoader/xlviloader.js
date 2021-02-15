@@ -69,9 +69,9 @@ const Anim = (animParams) => keyframes`
 `;
 
 const StyledContainer = styled.div`
-background: ${props => props.background};
-  width: ${props => props.sizeContainer}px;
-  height: ${props => props.sizeContainer}px;
+  background: ${(props) => props.background};
+  width: ${(props) => props.sizeContainer}px;
+  height: ${(props) => props.sizeContainer}px;
   padding: 20px;
 `;
 
@@ -79,14 +79,15 @@ const StyledBox = styled.div`
   box-sizing: border-box;
   position: absolute;
   display: block;
-  border-radius: ${props => props.sizeBorderRadius}px;
-  border: ${props => props.sizeBorderThickness}px solid ${props => props.borderColor};
-  width: ${props => props.boxParams.w}px;
-  height: ${props => props.boxParams.h}px;
-  margin-top: ${props => props.boxParams.mt}px;
-  margin-left: ${props => props.boxParams.ml}px;
-  animation: ${props => Anim(props.animParams)} 3s 0s forwards cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
-
+  border-radius: ${(props) => props.sizeBorderRadius}px;
+  border: ${(props) => props.sizeBorderThickness}px solid
+    ${(props) => props.borderColor};
+  width: ${(props) => props.boxParams.w}px;
+  height: ${(props) => props.boxParams.h}px;
+  margin-top: ${(props) => props.boxParams.mt}px;
+  margin-left: ${(props) => props.boxParams.ml}px;
+  animation: ${(props) => Anim(props.animParams)} 3s 0s forwards
+    cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
 `;
 
 const XlviLoader = ({
@@ -97,169 +98,216 @@ const XlviLoader = ({
   desktopSize = ``,
   mobileSize = ``,
 }) => {
-    let colorsToFill = [];
-    if(boxColors.constructor === String) {
-        if(boxColors===``){
-            boxColors = '#333';
-        }
-        colorsToFill.push(boxColors);
+  let colorsToFill = [];
+  if (boxColors.constructor === String) {
+    if (boxColors === ``) {
+      boxColors = "#333";
     }
-    if(boxColors.constructor === Array) {
-        let asize = boxColors.length;
-        if(asize === 0){
-            boxColors.push('#333');
-            asize = boxColors.length;
-        }
-        for(let i=0 ; i<3 ; i+=1){
-            if(i < asize) colorsToFill.push(boxColors[i]);
-            else colorsToFill.push(boxColors[asize - 1]);
-        }
+    colorsToFill.push(boxColors);
+  }
+  if (boxColors.constructor === Array) {
+    let asize = boxColors.length;
+    if (asize === 0) {
+      boxColors.push("#333");
+      asize = boxColors.length;
     }
+    for (let i = 0; i < 3; i += 1) {
+      if (i < asize) colorsToFill.push(boxColors[i]);
+      else colorsToFill.push(boxColors[asize - 1]);
+    }
+  }
 
-    const isDesktopOrLaptop = useMediaQuery({ query: "(min-width: 1224px)" });
+  const isDesktopOrLaptop = useMediaQuery({ query: "(min-width: 1224px)" });
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
   var sizeFound = 0.0;
-    if(isDesktopOrLaptop){
-        if(desktopSize!=='')
-            sizeFound = parseFloat(desktopSize);
-        else
-            sizeFound = parseFloat(size)*2;
-    }
+  if (isDesktopOrLaptop) {
+    if (desktopSize !== "") sizeFound = parseFloat(desktopSize);
+    else sizeFound = parseFloat(size) * 2;
+  }
 
-    if(isTabletOrMobile){
-        if(mobileSize!=='')
-            sizeFound = parseFloat(mobileSize);
-        else
-            sizeFound = parseFloat(size);
-    }
+  if (isTabletOrMobile) {
+    if (mobileSize !== "") sizeFound = parseFloat(mobileSize);
+    else sizeFound = parseFloat(size);
+  }
 
-    let sizePassed = parseFloat(sizeFound);
-    let sizeContainer = (sizePassed * 112)/64;
-    let sizeBorderRadius = (sizePassed * 24)/64;
-    let sizeBorderThickness = (sizePassed * 16)/64;
+  let sizePassed = parseFloat(sizeFound);
+  let sizeContainer = (sizePassed * 112) / 64;
+  let sizeBorderRadius = (sizePassed * 24) / 64;
+  let sizeBorderThickness = (sizePassed * 16) / 64;
 
-    let box1Params = {
-        w: (sizePassed * 112)/64,
-        h: (sizePassed * 48)/64,
-        mt: (sizePassed * 64)/64,
-        ml: 0
-    }
+  let box1Params = {
+    w: (sizePassed * 112) / 64,
+    h: (sizePassed * 48) / 64,
+    mt: (sizePassed * 64) / 64,
+    ml: 0,
+  };
 
-    let box2Params = {
-        w: (sizePassed * 48)/64,
-        h: (sizePassed * 48)/64,
-        mt: 0,
-        ml: 0
-    }
+  let box2Params = {
+    w: (sizePassed * 48) / 64,
+    h: (sizePassed * 48) / 64,
+    mt: 0,
+    ml: 0,
+  };
 
-    let box3Params = {
-        w: (sizePassed * 48)/64,
-        h: (sizePassed * 48)/64,
-        mt: 0,
-        ml: (sizePassed * 64)/64
-    }
+  let box3Params = {
+    w: (sizePassed * 48) / 64,
+    h: (sizePassed * 48) / 64,
+    mt: 0,
+    ml: (sizePassed * 64) / 64,
+  };
 
-    let anim1Params = {
-        w: [(sizePassed * 112)/64,
-            (sizePassed * 48)/64, 
-            (sizePassed * 48)/64, 
-            (sizePassed * 48)/64, 
-            (sizePassed * 48)/64, 
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64],
-        h: [(sizePassed * 48)/64, 
-            (sizePassed * 48)/64, 
-            (sizePassed * 48)/64, 
-            (sizePassed * 48)/64, 
-            (sizePassed * 48)/64, 
-            (sizePassed * 48)/64,
-            (sizePassed * 112)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64],
-        mt: [(sizePassed * 64)/64, 
-            (sizePassed * 64)/64, 
-            (sizePassed * 64)/64, 
-            (sizePassed * 64)/64, 
-            (sizePassed * 64)/64, 
-            (sizePassed * 64)/64,
-            0,
-            0,
-            0],
-        ml: [0, 0, 0, 0, 0, 0, 0, 0, 0]
-    }
+  let anim1Params = {
+    w: [
+      (sizePassed * 112) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+    ],
+    h: [
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 112) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+    ],
+    mt: [
+      (sizePassed * 64) / 64,
+      (sizePassed * 64) / 64,
+      (sizePassed * 64) / 64,
+      (sizePassed * 64) / 64,
+      (sizePassed * 64) / 64,
+      (sizePassed * 64) / 64,
+      0,
+      0,
+      0,
+    ],
+    ml: [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  };
 
-    let anim2Params = {
-        w: [(sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 112)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64],
-        h: [(sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64],
-        mt: [0, 0, 0, 0, 0, 0, 0, 0, 0],
-        ml: [0, 0, 0, 0, 0,
-            (sizePassed * 64)/64,
-            (sizePassed * 64)/64,
-            (sizePassed * 64)/64,
-            (sizePassed * 64)/64]
-    }
+  let anim2Params = {
+    w: [
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 112) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+    ],
+    h: [
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+    ],
+    mt: [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    ml: [
+      0,
+      0,
+      0,
+      0,
+      0,
+      (sizePassed * 64) / 64,
+      (sizePassed * 64) / 64,
+      (sizePassed * 64) / 64,
+      (sizePassed * 64) / 64,
+    ],
+  };
 
-    let anim3Params = {
-        w: [(sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 112)/64],
-        h: [(sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 112)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64,
-            (sizePassed * 48)/64],
-        mt: [0, 0, 0,
-            (sizePassed * 64)/64,
-            (sizePassed * 64)/64,
-            (sizePassed * 64)/64,
-            (sizePassed * 64)/64,
-            (sizePassed * 64)/64,
-            (sizePassed * 64)/64],
-        ml: [(sizePassed * 64)/64,
-             (sizePassed * 64)/64,
-             (sizePassed * 64)/64,
-             (sizePassed * 64)/64,
-             (sizePassed * 64)/64,
-             (sizePassed * 64)/64,
-             (sizePassed * 64)/64,
-             (sizePassed * 64)/64,
-             0]
-    }
+  let anim3Params = {
+    w: [
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 112) / 64,
+    ],
+    h: [
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 112) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+      (sizePassed * 48) / 64,
+    ],
+    mt: [
+      0,
+      0,
+      0,
+      (sizePassed * 64) / 64,
+      (sizePassed * 64) / 64,
+      (sizePassed * 64) / 64,
+      (sizePassed * 64) / 64,
+      (sizePassed * 64) / 64,
+      (sizePassed * 64) / 64,
+    ],
+    ml: [
+      (sizePassed * 64) / 64,
+      (sizePassed * 64) / 64,
+      (sizePassed * 64) / 64,
+      (sizePassed * 64) / 64,
+      (sizePassed * 64) / 64,
+      (sizePassed * 64) / 64,
+      (sizePassed * 64) / 64,
+      (sizePassed * 64) / 64,
+      0,
+    ],
+  };
 
   return (
-    <StyledContainer sizeContainer={sizeContainer} background={backgound} className={className}>
-      <StyledBox boxParams={box1Params} sizeBorderRadius={sizeBorderRadius} sizeBorderThickness={sizeBorderThickness} borderColor={colorsToFill[0]} animParams={anim1Params} className="box1"></StyledBox>
-      <StyledBox boxParams={box2Params} sizeBorderRadius={sizeBorderRadius} sizeBorderThickness={sizeBorderThickness} borderColor={colorsToFill[1]} animParams={anim2Params} className="box2"></StyledBox>
-      <StyledBox boxParams={box3Params} sizeBorderRadius={sizeBorderRadius} sizeBorderThickness={sizeBorderThickness} borderColor={colorsToFill[2]} animParams={anim3Params} className="box3"></StyledBox>
+    <StyledContainer
+      sizeContainer={sizeContainer}
+      background={backgound}
+      className={className}
+    >
+      <StyledBox
+        boxParams={box1Params}
+        sizeBorderRadius={sizeBorderRadius}
+        sizeBorderThickness={sizeBorderThickness}
+        borderColor={colorsToFill[0]}
+        animParams={anim1Params}
+        className="box1"
+      ></StyledBox>
+      <StyledBox
+        boxParams={box2Params}
+        sizeBorderRadius={sizeBorderRadius}
+        sizeBorderThickness={sizeBorderThickness}
+        borderColor={colorsToFill[1]}
+        animParams={anim2Params}
+        className="box2"
+      ></StyledBox>
+      <StyledBox
+        boxParams={box3Params}
+        sizeBorderRadius={sizeBorderRadius}
+        sizeBorderThickness={sizeBorderThickness}
+        borderColor={colorsToFill[2]}
+        animParams={anim3Params}
+        className="box3"
+      ></StyledBox>
     </StyledContainer>
   );
 };

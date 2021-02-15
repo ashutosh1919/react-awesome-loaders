@@ -3,32 +3,35 @@ title: Sunspot Loader
 section: Loaders
 ---
 
-import {Loader} from '../code/loader.js'
+import { Loader } from "../code/loader.js";
 
 # Sunspot Loader
-Loader with rotating spot effect 
+
+Loader with rotating spot effect
 
 ## Usage
+
 <Loader name="SunspotLoader" />
 
 ```js highlight={1,5-10}
-import { SunspotLoader } from 'react-awesome-loaders'
+import { SunspotLoader } from "react-awesome-loaders";
 export const SunspotLoaderComponent = () => {
-    return (
-        <>
-            <SunspotLoader
-                gradientColors={["#6366F1", "#E0E7FF"]}
-                shadowColor={"#3730A3"}
-                desktopSize={"128px"}
-                mobileSize={"100px"} 
-            />
-        </>
-    )
-}
+  return (
+    <>
+      <SunspotLoader
+        gradientColors={["#6366F1", "#E0E7FF"]}
+        shadowColor={"#3730A3"}
+        desktopSize={"128px"}
+        mobileSize={"100px"}
+      />
+    </>
+  );
+};
 ```
 
 ## Parameters
-Below are the parameters for **SunspotLoader** that you can customize.  
+
+Below are the parameters for **SunspotLoader** that you can customize.
 
 | Option             | Description                   | Type   | Default                  |
 | ------------------ | ----------------------------- | ------ | ------------------------ |
@@ -45,4 +48,8 @@ You can pass one or two colors to `gradientColors`. If there is only one color, 
 
 > `size`, `desktopSize` and `mobileSize` attributes are defined relative to `64px` for all loaders and it doesn't mean the actual size would be `64px`. It means all the sizes defined will be w.r.t `64px`. If you pass `128px` then the size doubles. Also, note that if one of the `desktopSize` and `mobileSize` is not defined, then it will use the `size` attribute. Value defined in `size` attribute is assigned for mobile devices and loader automatically doubles the size on desktop device.
 
-<p align="center" style="font-size:13px;margin-top:20px;">❤️ Inspired from <a href="https://codepen.io/chrisgannon/pen/vYGozeN">codepen</a> by <a href="https://codepen.io/chrisgannon">Chris Gannon</a></p>
+<p align="center" style="font-size:13px;margin-top:20px;">
+  ❤️ Inspired from{" "}
+  <a href="https://codepen.io/chrisgannon/pen/vYGozeN">codepen</a> by{" "}
+  <a href="https://codepen.io/chrisgannon">Chris Gannon</a>
+</p>

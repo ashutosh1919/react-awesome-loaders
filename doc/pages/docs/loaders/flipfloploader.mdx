@@ -3,30 +3,30 @@ title: FlipFlop Loader
 section: Loaders
 ---
 
-import {Loader} from '../code/loader.js'
+import { Loader } from "../code/loader.js";
 
 # FlipFlop Loader
-Loader with shaking O effect 
+
+Loader with shaking O effect
 
 ## Usage
+
 <Loader name="FlipFlopLoader" />
 
 ```js highlight={1,5-8}
-import { FlipFlopLoader } from 'react-awesome-loaders'
+import { FlipFlopLoader } from "react-awesome-loaders";
 export const FlipFlopLoaderComponent = () => {
-    return (
-        <>
-            <FlipFlopLoader
-                desktopSize={"128px"}
-                mobileSize={"128px"}
-            />
-        </>
-    )
-}
+  return (
+    <>
+      <FlipFlopLoader desktopSize={"128px"} mobileSize={"128px"} />
+    </>
+  );
+};
 ```
 
 ## Parameters
-Below are the parameters for **BoxesLoader** that you can customize.  
+
+Below are the parameters for **BoxesLoader** that you can customize.
 
 | Option                    | Description                             | Type   | Default          |
 | ------------------------- | --------------------------------------- | ------ | ---------------- |
@@ -47,7 +47,10 @@ Below are the parameters for **BoxesLoader** that you can customize.
 
 Some of the color parameters like `ringShiness`, `ringLightColor`, `ringLightIntensity`, `ringAmbientLightColor` are added for this loader since it is created in 3D using `three.js` and the resultant loader is the 3D model.
 
-
 > `size`, `desktopSize` and `mobileSize` attributes are defined relative to `64px` for all loaders and it doesn't mean the actual size would be `64px`. It means all the sizes defined will be w.r.t `64px`. If you pass `128px` then the size doubles. Also, note that if one of the `desktopSize` and `mobileSize` is not defined, then it will use the `size` attribute. Value defined in `size` attribute is assigned for mobile devices and loader automatically doubles the size on desktop device.
 
-<p align="center" style="font-size:13px;margin-top:20px;">❤️ Inspired from <a href="https://codepen.io/aaroniker/pen/bGbRyRL">codepen</a> by <a href="https://dribbble.com/ai">Aaron Iker</a></p>
+<p align="center" style="font-size:13px;margin-top:20px;">
+  ❤️ Inspired from{" "}
+  <a href="https://codepen.io/aaroniker/pen/bGbRyRL">codepen</a> by{" "}
+  <a href="https://dribbble.com/ai">Aaron Iker</a>
+</p>

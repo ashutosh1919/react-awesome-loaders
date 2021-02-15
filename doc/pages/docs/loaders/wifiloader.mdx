@@ -3,34 +3,37 @@ title: Wifi Loader
 section: Loaders
 ---
 
-import {Loader} from '../code/loader.js'
+import { Loader } from "../code/loader.js";
 
 # Wifi Loader
-Loader with multiple circles rotating effect 
+
+Loader with multiple circles rotating effect
 
 ## Usage
+
 <Loader name="WifiLoader" />
 
 ```js highlight={1,5-12}
-import { WifiLoader } from 'react-awesome-loaders'
+import { WifiLoader } from "react-awesome-loaders";
 export const WifiLoaderComponent = () => {
-    return (
-        <>
-            <WifiLoader
-                background={"transparent"}
-                desktopSize={"150px"}
-                mobileSize={"150px"}
-                text={"Wifi Loader"}
-                backColor="#E8F2FC"
-                frontColor="#4645F6"
-            />
-        </>
-    )
-}
+  return (
+    <>
+      <WifiLoader
+        background={"transparent"}
+        desktopSize={"150px"}
+        mobileSize={"150px"}
+        text={"Wifi Loader"}
+        backColor="#E8F2FC"
+        frontColor="#4645F6"
+      />
+    </>
+  );
+};
 ```
 
 ## Parameters
-Below are the parameters for **WifiLoader** that you can customize.  
+
+Below are the parameters for **WifiLoader** that you can customize.
 
 | Option          | Description                          | Type   | Default       |
 | --------------- | ------------------------------------ | ------ | ------------- |
@@ -46,4 +49,8 @@ Below are the parameters for **WifiLoader** that you can customize.
 
 > `size`, `desktopSize` and `mobileSize` attributes are defined relative to `64px` for all loaders and it doesn't mean the actual size would be `64px`. It means all the sizes defined will be w.r.t `64px`. If you pass `128px` then the size doubles. Also, note that if one of the `desktopSize` and `mobileSize` is not defined, then it will use the `size` attribute. Value defined in `size` attribute is assigned for mobile devices and loader automatically doubles the size on desktop device.
 
-<p align="center" style="font-size:13px;margin-top:20px;">❤️ Inspired from <a href="https://codepen.io/milanraring/pen/zYrYggg">codepen</a> by <a href="https://dribbble.com/milanraring">Milan Raring</a></p>
+<p align="center" style="font-size:13px;margin-top:20px;">
+  ❤️ Inspired from{" "}
+  <a href="https://codepen.io/milanraring/pen/zYrYggg">codepen</a> by{" "}
+  <a href="https://dribbble.com/milanraring">Milan Raring</a>
+</p>

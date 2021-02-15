@@ -1,37 +1,37 @@
 import React, { useEffect } from "react";
 import * as THREE from "three";
 import { gsap, Elastic } from "gsap";
-import styled from 'styled-components';
+import styled from "styled-components";
 import { useMediaQuery } from "react-responsive";
 // import './flipfloploader.css';
 
 const Container = styled.div`
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 `;
 
 const StyledCanvas = styled.canvas`
-display: block;
-width: ${props => props.sizeRing}px;
-height: ${props => props.sizeRing}px;
-transform: translateY(-1px);
+  display: block;
+  width: ${(props) => props.sizeRing}px;
+  height: ${(props) => props.sizeRing}px;
+  transform: translateY(-1px);
 `;
 
 const StyledSpan = styled.span`
-display: block;
-font-family: 'Roboto', Arial;
-font-size: ${props => props.sizeFont}px;
-font-weight: 900;
-color: ${props => props.textColor};
-letter-spacing: 4px;
+  display: block;
+  font-family: "Roboto", Arial;
+  font-size: ${(props) => props.sizeFont}px;
+  font-weight: 900;
+  color: ${(props) => props.textColor};
+  letter-spacing: 4px;
 `;
 
 const StyledSpanFirst = styled(StyledSpan)`
-transform: translateX(calc(var(--x-f) * 1px));
+  transform: translateX(calc(var(--x-f) * 1px));
 `;
 
 const StyledSpanLast = styled(StyledSpan)`
-transform: translateX(calc(var(--x-l) * -1px));
+  transform: translateX(calc(var(--x-l) * -1px));
 `;
 
 const FlipFlopLoader = ({
@@ -50,30 +50,26 @@ const FlipFlopLoader = ({
   desktopSize = ``,
   mobileSize = ``,
 }) => {
-    const isDesktopOrLaptop = useMediaQuery({ query: "(min-width: 1224px)" });
+  const isDesktopOrLaptop = useMediaQuery({ query: "(min-width: 1224px)" });
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
   let sizeFound = 0.0;
-    if(isDesktopOrLaptop){
-        if(desktopSize!=='')
-            sizeFound = parseFloat(desktopSize);
-        else
-            sizeFound = parseFloat(size)*2;
-    }
-    if(isTabletOrMobile){
-        if(mobileSize!=='')
-            sizeFound = parseFloat(mobileSize);
-        else
-            sizeFound = parseFloat(size);
-    }
+  if (isDesktopOrLaptop) {
+    if (desktopSize !== "") sizeFound = parseFloat(desktopSize);
+    else sizeFound = parseFloat(size) * 2;
+  }
+  if (isTabletOrMobile) {
+    if (mobileSize !== "") sizeFound = parseFloat(mobileSize);
+    else sizeFound = parseFloat(size);
+  }
 
-    let sizePassed = parseFloat(sizeFound);
-    let sizeRing = (sizePassed * 40)/64;
-    let sizeFont = (sizePassed * 32)/64;
-    let sizeXf = (sizePassed * 8)/64;
-    let sizeXl = (sizePassed * 5)/64;
-    let sizeXfUpdate = (sizePassed * 14)/64;
-    let sizeXlUpdate = (sizePassed * 12)/64;
+  let sizePassed = parseFloat(sizeFound);
+  let sizeRing = (sizePassed * 40) / 64;
+  let sizeFont = (sizePassed * 32) / 64;
+  let sizeXf = (sizePassed * 8) / 64;
+  let sizeXl = (sizePassed * 5) / 64;
+  let sizeXfUpdate = (sizePassed * 14) / 64;
+  let sizeXlUpdate = (sizePassed * 12) / 64;
 
   useEffect(() => {
     let canvas = document.querySelector(".flipflop-loader-canvas"),
@@ -125,17 +121,26 @@ const FlipFlopLoader = ({
 
     scene.add(object);
 
-    let lightTop = new THREE.DirectionalLight(ringLightColor, ringLightIntensity);
+    let lightTop = new THREE.DirectionalLight(
+      ringLightColor,
+      ringLightIntensity
+    );
     lightTop.position.set(0, 40, 80);
     lightTop.castShadow = true;
     scene.add(lightTop);
 
-    let lightCenter = new THREE.DirectionalLight(ringLightColor, ringLightIntensity);
+    let lightCenter = new THREE.DirectionalLight(
+      ringLightColor,
+      ringLightIntensity
+    );
     lightCenter.position.set(0, 20, 0);
     lightCenter.castShadow = true;
     scene.add(lightCenter);
 
-    let lightBottom = new THREE.DirectionalLight(ringLightColor, ringLightIntensity);
+    let lightBottom = new THREE.DirectionalLight(
+      ringLightColor,
+      ringLightIntensity
+    );
     lightBottom.position.set(0, -40, 80);
     lightBottom.castShadow = true;
     scene.add(lightBottom);
@@ -144,8 +149,8 @@ const FlipFlopLoader = ({
 
     var docElem = document.getElementsByClassName(className)[0],
       offset = {
-        xf: sizeXf,//getComputedStyle(docElem).getPropertyValue("--x-f"),
-        xl: sizeXl,//getComputedStyle(docElem).getPropertyValue("--x-l"),
+        xf: sizeXf, //getComputedStyle(docElem).getPropertyValue("--x-f"),
+        xl: sizeXl, //getComputedStyle(docElem).getPropertyValue("--x-l"),
       };
     console.log(docElem);
 
@@ -185,9 +190,16 @@ const FlipFlopLoader = ({
 
   return (
     <Container className={className}>
-      <StyledSpanFirst sizeFont={sizeFont} textColor={textColor}>{textBeforeRing}</StyledSpanFirst>
-      <StyledCanvas sizeRing={sizeRing} className="flipflop-loader-canvas"></StyledCanvas>
-      <StyledSpanLast sizeFont={sizeFont} textColor={textColor}>{textAfterRing}</StyledSpanLast>
+      <StyledSpanFirst sizeFont={sizeFont} textColor={textColor}>
+        {textBeforeRing}
+      </StyledSpanFirst>
+      <StyledCanvas
+        sizeRing={sizeRing}
+        className="flipflop-loader-canvas"
+      ></StyledCanvas>
+      <StyledSpanLast sizeFont={sizeFont} textColor={textColor}>
+        {textAfterRing}
+      </StyledSpanLast>
     </Container>
   );
 };

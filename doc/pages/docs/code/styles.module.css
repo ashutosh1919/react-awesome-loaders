@@ -1,10 +1,10 @@
 .easter {
-    display: inline-block;
-    position: relative;
-    cursor: grab;
-    touch-action: none;
-  }
-  
+  display: inline-block;
+  position: relative;
+  cursor: grab;
+  touch-action: none;
+}
+
 .loader {
   display: flex;
   width: 100%;
