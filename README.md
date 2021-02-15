@@ -60,7 +60,8 @@ export default LoadingComponent
 
 The loaders are very flexible to import and use wherever you want and in any web framework that uses NPM.  
 The loaders are auto-responsive. i.e. The size of loader automatically adjusts itself on smaller screen sizes.  
-Ofcourse, you can set different sizes for different screens by passing props `desktopSize` and `mobileSize`.
+Ofcourse, you can set different sizes for different screens by passing props `desktopSize` and `mobileSize`.  
+Read the complete in detail documentation on the [project website](https://awesome-loaders.netlify.app/).
 
 # License 📄
 
@@ -80,7 +81,7 @@ I open-source almost everything I can, and I try to reply to everyone needing he
 However, if you are using this project and happy with it or just want to encourage me to continue creating stuff, there are few ways you can do it :-
 
 - Giving proper credit when you use this on your project, linking back to it :D
-- Starring and sharing the project 🚀
+- Starring, giving shoutouts and sharing the project 🚀
 - You can make one-time donations by clicking the buttons below. I'll probably buy an amazing workstation which will help me build more aggressively.
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/paypalme/devsense19) <a href="https://www.buymeacoffee.com/devsense19" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" height="50px" ></a>
@@ -107,3 +108,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+# References 👏🏻
+
+We have used many of the amazing resources to create this project and it is difficult to display all those resources here on github repository.  
+
+That is why we have displayed almost all used dependencies on our [website](https://awesome-loaders.netlify.app/docs/references/).  
+
+Also, I have also mentioned the link and profile url of the original concept creators of the loaders at the bottom of corresponding loader documentation on website.
