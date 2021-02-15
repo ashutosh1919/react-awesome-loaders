@@ -72,6 +72,7 @@ export const HeroContainer = styled(ScreenContainer)`
     display: flex;
     flex-direction: row !important;
     padding-top: 5%;
+    overflow: hidden;
     @media (max-width: 768px) {
         flex-direction: column-reverse !important;
       }
