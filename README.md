@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">React Awesome Loaders</h1> 
-<h3 align="center"> 🚀 High quality, super responsive and completely customisable <br/> Loading Animations to insert into your website with single line of code. </h3>
+<h3 align="center"> 🚀 High quality, super responsive and completely customisable Loading Animations. </h3>
 
 <p align="center">
   <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fashutosh1919%2Freact-awesome-loaders&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
@@ -19,4 +19,13 @@
   <a href="https://awesome-loaders.netlify.app/"><img alt="Website" src="https://img.shields.io/badge/website-up-yellow?style=flat-square" /></a>
   <a href="http://badges.mit-license.org/"><img alt="License" src="http://img.shields.io/:license-mit-blue.svg?style=flat-square?style=flat-square" /></a>
   <a href="https://img.shields.io/badge/price-free-ff69b4"><img alt="Price" src="https://img.shields.io/badge/price-free-ff69b4?style=flat-square" /></a>
+</p>
+
+<p align="center">Loved the project? Please consider <a href="https://www.paypal.com/paypalme/devsense19">donating</a> to help it improve!</p>
+<p align="center">If you want to discuss about something, then you can ask on my <a href="https://discord.com/invite/GkcbM5bwZr">Discord Server</a>.</p>
+
+<p align="center"> 
+    <a href="https://awesome-loaders.netlify.app/" target="_blank">
+    <img src="doc/images/showcase.gif"></img>
+  </a>
 </p>

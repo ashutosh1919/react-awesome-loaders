@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "React Awesome Loaders",
-    description: "Awesome Loading animations",
+    description: "High quality, super responsive and completely customisable Loading Animations to insert into your website with single line of code.",
     author: "Ashutosh Hathidara",
     sections: ['Introduction', 'Loaders', 'More'],
     navItems: [
@@ -14,9 +14,10 @@ module.exports = {
     {
       resolve: "smooth-doc",
       options: {
-        name: "Smooth DOC Starter",
-        description: "Use your own description...",
+        name: "React Awesome Loaders",
+        description: "High quality, super responsive and completely customisable Loading Animations to insert into your website with single line of code.",
         siteUrl: "http://localhost:8000",
+        author: 'Ashutosh Hathidara',
       },
     },
   ],

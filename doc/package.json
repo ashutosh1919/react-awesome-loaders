@@ -1,6 +1,8 @@
 {
-  "name": "smooth-doc-starter",
-  "version": "0.0.0",
+  "name": "react-awesome-loaders-doc",
+  "description": "High quality, super responsive and completely customisable Loading Animations to insert into your website with single line of code.",
+  "version": "1.0.0",
+  "author": "ashutosh1919",
   "private": true,
   "scripts": {
     "develop": "gatsby develop",
@@ -22,5 +24,34 @@
     "react-use-gesture": "^9.0.1",
     "smooth-doc": "^5.0.4",
     "styled-components": "^5.2.1"
-  }
+  },
+  "keywords": [
+    "awesome-loaders",
+    "react-awesome-loaders",
+    "react",
+    "react-components",
+    "loaders",
+    "spinners",
+    "loader",
+    "spinner",
+    "react-loaders",
+    "react-loader",
+    "react-spinners",
+    "react-spinner",
+    "react-css-spinners",
+    "react-css-loaders-kit",
+    "react-pure-css-spinners",
+    "react-pure-css-loaders",
+    "react-loaders-kit",
+    "progress",
+    "progress-indicator",
+    "activity",
+    "activity-loader",
+    "loading",
+    "loading-indicators",
+    "react-loading-indicators",
+    "react-loading-animations",
+    "react-css-loading-animations",
+    "progress-bar"
+  ]
 }
