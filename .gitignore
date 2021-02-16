@@ -277,7 +277,6 @@ FakesAssemblies/
 .ntvs_analysis.dat
 node_modules/
 lib/
-package-lock.json
 public/
 
 # Visual Studio 6 build log
