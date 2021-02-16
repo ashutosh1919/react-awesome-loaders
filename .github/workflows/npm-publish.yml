@@ -15,7 +15,6 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm run build
-      - run: npm test
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest
