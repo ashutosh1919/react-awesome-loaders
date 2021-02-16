@@ -22,6 +22,7 @@
 </p>
 
 <p align="center">Loved the project? Please consider <a href="https://www.paypal.com/paypalme/devsense19">donating</a> to help it improve!</p>
+<p align="center">See the official launch of the project and demo on my <a href="https://youtu.be/_1mDp8ZKfgY">YouTube Channel</a>.</p>
 <p align="center">If you want to discuss about something, then you can ask on my <a href="https://discord.com/invite/GkcbM5bwZr">Discord Server</a>.</p>
 
 <p align="center"> 
