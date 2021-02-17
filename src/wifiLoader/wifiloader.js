@@ -211,9 +211,6 @@ const WifiLoader = ({
   if (ratio === 1) {
     sizeText = 14;
   }
-  console.log(sizeOuter);
-  console.log(sizeMiddle);
-  console.log(sizeInner);
   return (
     <ParentDiv
       background={background}
