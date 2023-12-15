@@ -173,8 +173,8 @@ const FlipFlopLoader = ({
         1.6,
         {
           ease: Elastic.easeInOut.config(1.2, 0.5),
-          x: THREE.Math.degToRad(90),
-          y: THREE.Math.degToRad(90),
+          x: THREE.MathUtils.degToRad(90),
+          y: THREE.MathUtils.degToRad(90),
         },
         0
       );

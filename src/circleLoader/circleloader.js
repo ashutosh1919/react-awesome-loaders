@@ -106,7 +106,7 @@ const CircleLoader = ({
 
     camera.position.z = 100;
     camera.position.y = -160;
-    camera.rotation.x = THREE.Math.degToRad(60);
+    camera.rotation.x = THREE.MathUtils.degToRad(60);
 
     let planeGeometry = new THREE.PlaneGeometry(200, 200),
       planeMaterial = new THREE.ShadowMaterial();
