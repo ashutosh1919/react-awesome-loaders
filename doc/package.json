@@ -12,7 +12,7 @@
   "dependencies": {
     "@mdx-js/react": "^1.6.22",
     "@xstyled/styled-components": "^2.2.2",
-    "gatsby": "^2.15.18",
+    "gatsby": "^5.12.12",
     "parse-numeric-range": "^1.2.0",
     "prism-react-renderer": "^1.1.1",
     "react": "^16.10.1",
@@ -22,7 +22,7 @@
     "react-player": "^2.8.2",
     "react-spring": "^9.0.0-rc.2",
     "react-use-gesture": "^9.0.1",
-    "smooth-doc": "^5.0.4",
+    "smooth-doc": "^10.1.0",
     "styled-components": "^5.2.1"
   },
   "keywords": [
