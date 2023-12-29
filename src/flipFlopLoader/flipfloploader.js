@@ -145,7 +145,7 @@ const FlipFlopLoader = ({
     lightBottom.castShadow = true;
     scene.add(lightBottom);
 
-    scene.add(new THREE.AmbientLight(ringAmbientLightColor));
+    scene.add(new THREE.AmbientLight(ringAmbientLightColor, 3));
 
     var docElem = document.getElementsByClassName(className)[0],
       offset = {
