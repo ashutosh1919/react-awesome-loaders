@@ -69,8 +69,8 @@ const Container = styled.div`
   @media (max-width: 480px) {
     zoom: 0.44;
   }
-  :before,
-  :after {
+  &:before,
+  &:after {
     --r: 20.5deg;
     content: "";
     width: 320px;
@@ -82,7 +82,7 @@ const Container = styled.div`
     transform: translateZ(200px) rotate(var(--r));
     animation: ${AnimMask} var(--duration) linear forwards infinite;
   }
-  :after {
+  &:after {
     --r: -20.5deg;
     right: auto;
     left: 32%;
@@ -104,8 +104,8 @@ const GroundDiv = styled.div`
   );
   transform-style: preserve-3d;
   animation: ${AnimGround} var(--duration) linear forwards infinite;
-  :before,
-  :after {
+  &:before,
+  &:after {
     --rx: 90deg;
     --ry: 0deg;
     --x: 44px;
@@ -121,7 +121,7 @@ const GroundDiv = styled.div`
       translate(var(--x), var(--y)) translateZ(var(--z));
     animation: ${AnimGroundShine} var(--duration) linear forwards infinite;
   }
-  :after {
+  &:after {
     --rx: 90deg;
     --ry: 90deg;
     --x: 0;
