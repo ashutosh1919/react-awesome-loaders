@@ -7,8 +7,8 @@
 
 <p align="center">
   <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fashutosh1919%2Freact-awesome-loaders&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
-  <a href="https://nodejs.org/en/blog/release/v12.18.3/"><img alt="NodeJS" src="https://img.shields.io/badge/node-12.18.3-important?style=flat-square" /></a>
-  <a href="https://www.npmjs.com/package/npm/v/6.14.6"><img alt="NPM" src="https://img.shields.io/badge/npm-6.14.6-61DAFB?style=flat-square" /></a>
+  <a href="https://nodejs.org/en/blog/release/v18.15.0/"><img alt="NodeJS" src="https://img.shields.io/badge/node-18.15.0-important?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/npm/v/9.5.0"><img alt="NPM" src="https://img.shields.io/badge/npm-9.5.0-61DAFB?style=flat-square" /></a>
   <a href="https://www.gatsbyjs.com/"><img alt="Made With Gatsby" src="https://img.shields.io/badge/made%20with-gatsby-blueviolet?style=flat-square" /></a>
   <a href="https://github.com/prettier/prettier"><img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square?style=flat-square" /></a>
   <br/>

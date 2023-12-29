@@ -162,11 +162,11 @@ const StyledText = styled.div`
   font-size: ${(props) => props.passedSize}px;
   letter-spacing: 0.2px;
   margin-top: ${(props) => props.passedMargin}px;
-  ::before {
+  &:before {
     content: attr(data-text);
     color: ${(props) => props.textColor};
   }
-  ::after {
+  &:after {
     content: attr(data-text);
     color: ${(props) => props.frontColor};
     animation: ${AnimText} 3.6s ease infinite;

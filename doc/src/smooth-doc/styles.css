@@ -28,6 +28,10 @@ a {
   color: var(--xstyled-colors-on-background-primary, #4c51bf);
 }
 
+footer p {
+  display: inline;
+}
+
 footer a {
   color: inherit;
 }

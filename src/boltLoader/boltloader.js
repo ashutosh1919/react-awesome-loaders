@@ -75,7 +75,7 @@ const StyledSVGWhiteRight = styled(StyledSVGWhite)`
 const StyledDiv = styled.div`
   display: block;
   position: relative;
-  :before {
+  &:before {
     content: "";
     position: absolute;
     left: 50%;
@@ -86,7 +86,7 @@ const StyledDiv = styled.div`
     background: #cdd9ed;
     filter: blur(124px);
   }
-  :after {
+  &:after {
     content: "";
     position: absolute;
     left: 50%;
@@ -151,19 +151,19 @@ const BoltLoader = ({
         .set(div, {
           rotation: 360,
         })
-        .to(div, 0.7, {
+        .to(div, 1.4, {
           y: 80,
           rotation: 370,
         })
-        .to(div, 0.6, {
+        .to(div, 1.2, {
           y: -140,
           rotation: 20,
         })
-        .to(div, 0.1, {
+        .to(div, 0.2, {
           rotation: -24,
           y: 80,
         })
-        .to(div, 0.8, {
+        .to(div, 1.6, {
           ease: Back.easeOut.config(1.6),
           rotation: 0,
           y: 0,
@@ -173,7 +173,7 @@ const BoltLoader = ({
         setTimeout(() => {
           bolt.addClass("boltloaderanimatedelement");
           tween.restart();
-        }, 400);
+        }, 800);
       }
     });
   });
@@ -183,22 +183,22 @@ const BoltLoader = ({
       <style>
         {`
           .${className}.boltloaderanimatedelement div:before, .${className}.boltloaderanimatedelement div:after {
-                animation: shine 2s ease; 
+                animation: shine 4s ease; 
             } 
             .${className}.boltloaderanimatedelement div span {
-                animation: morph 2s ease;
+                animation: morph 4s ease;
             }
             .${className}.boltloaderanimatedelement svg.circle {
-                animation: circle 0.45s cubic-bezier(0.77, 0, 0.175, 1) forwards 1.3s;
+                animation: circle 0.9s cubic-bezier(0.77, 0, 0.175, 1) forwards 2.6s;
             }
             .${className}.boltloaderanimatedelement svg.line {
-                animation: line 0.45s cubic-bezier(0.77, 0, 0.175, 1) forwards 1.3s;
+                animation: line 0.9s cubic-bezier(0.77, 0, 0.175, 1) forwards 2.6s;
             }
             .${className}.boltloaderanimatedelement svg.white {
-                animation: white 0.45s cubic-bezier(0.77, 0, 0.175, 1) forwards 1.45s;
+                animation: white 0.9s cubic-bezier(0.77, 0, 0.175, 1) forwards 2.9s;
             }
             .${className}.boltloaderanimatedelement svg.white.right {
-                animation-delay: 1.6s;
+                animation-delay: 3.2s;
             }
             @keyframes circle {
                 100% {

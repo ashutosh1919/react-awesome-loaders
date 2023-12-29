@@ -103,22 +103,22 @@ const ThreeDLoader = ({
 
       circle1.rotation.x -= Math.PI / 2;
 
-      let lightFront = new THREE.PointLight(colorLight, 0.25);
+      let lightFront = new THREE.PointLight(colorLight, 2.5, 0, 0);
       lightFront.position.set(0, 300, 300);
       lightFront.castShadow = true;
       scene.add(lightFront);
 
-      let lightTop = new THREE.PointLight(colorLight, 0.4);
+      let lightTop = new THREE.PointLight(colorLight, 4, 0, 0);
       lightTop.position.set(0, 0, 400);
       lightTop.castShadow = true;
       scene.add(lightTop);
 
-      let lightBottom = new THREE.PointLight(colorLight, 0.1);
+      let lightBottom = new THREE.PointLight(colorLight, 1, 0, 0);
       lightBottom.position.set(0, -300, 0);
       lightBottom.castShadow = true;
       scene.add(lightBottom);
 
-      scene.add(new THREE.AmbientLight(colorAmbientLight));
+      scene.add(new THREE.AmbientLight(colorAmbientLight, 3));
 
       let speed = 0.024;
 

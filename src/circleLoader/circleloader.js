@@ -7,9 +7,9 @@ const CircleLoader = ({
   className = `circleloader`,
   meshColor = `#6366F1`,
   lightColor = `#FFFFFF`,
-  lightIntensity = 0.4,
+  lightIntensity = 3,
   ambientLightColor = `#E8EBFB`,
-  duration = 1,
+  duration = 2,
   size = `64px`,
   desktopSize = ``,
   mobileSize = ``,
@@ -54,10 +54,10 @@ const CircleLoader = ({
         arc.holes.push(hole);
 
         let geometry = new THREE.ExtrudeGeometry(arc, {
-            depth: height,
-            bevelEnabled: false,
-            curveSegments: segments,
-          }),
+          depth: height,
+          bevelEnabled: false,
+          curveSegments: segments,
+        }),
           material = new THREE.MeshLambertMaterial({
             color: meshColor,
           }),
@@ -106,7 +106,7 @@ const CircleLoader = ({
 
     camera.position.z = 100;
     camera.position.y = -160;
-    camera.rotation.x = THREE.Math.degToRad(60);
+    camera.rotation.x = THREE.MathUtils.degToRad(60);
 
     let planeGeometry = new THREE.PlaneGeometry(200, 200),
       planeMaterial = new THREE.ShadowMaterial();
@@ -133,7 +133,7 @@ const CircleLoader = ({
 
     scene.add(lightTop);
 
-    scene.add(new THREE.AmbientLight(ambientLightColor));
+    scene.add(new THREE.AmbientLight(ambientLightColor, 2));
 
     // Setup
 
