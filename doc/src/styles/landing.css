@@ -1,0 +1,149 @@
+:root {
+  color-scheme: light dark;
+  font-family: "Inter", system-ui, sans-serif;
+  background: #0b1020;
+  color: #e2e8f0;
+}
+
+body {
+  margin: 0;
+}
+
+.landing {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 3rem 0 4rem;
+}
+
+.hero-teaser {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #94a3b8;
+  margin: 0 0 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 360px;
+  padding: 2rem 0;
+  overflow: visible;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #6066fa, #4645f6);
+  color: white;
+}
+
+.btn-secondary {
+  border: 1px solid #334155;
+  color: #e2e8f0;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.feature h2 {
+  margin-top: 1rem;
+}
+
+.feature p {
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.cta {
+  text-align: center;
+  padding: 3rem 1rem;
+  border-radius: 1rem;
+  background: rgba(96, 102, 250, 0.08);
+  border: 1px solid rgba(96, 102, 250, 0.2);
+}
+
+.cta pre {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: #111827;
+}
+
+.landing-footer {
+  margin-top: 4rem;
+  text-align: center;
+  color: #94a3b8;
+}
+
+.landing-footer a {
+  color: #c7d2fe;
+  margin-left: 0.35rem;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    background: #f8fafc;
+    color: #0f172a;
+  }
+
+  .hero-teaser,
+  .feature p,
+  .landing-footer {
+    color: #475569;
+  }
+
+  .feature {
+    background: white;
+    border-color: #e2e8f0;
+  }
+
+  .btn-secondary {
+    border-color: #cbd5e1;
+    color: #0f172a;
+  }
+}

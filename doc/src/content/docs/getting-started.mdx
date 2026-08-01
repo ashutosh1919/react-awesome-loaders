@@ -1,0 +1,79 @@
+---
+title: Getting Started
+description: Install and use React Awesome Loaders in your project.
+---
+
+import Rug from "../../components/Rug";
+
+# Overview
+
+Getting started with <Rug client:load /> is straightforward.
+
+## What is React Awesome Loaders?
+
+<Rug client:load /> is an NPM package `react-awesome-loaders` which lets you create high-quality, super-responsive and customizable loading animations to insert into your website.
+
+## Why I created it?
+
+As the owner of UI projects like [MasterPortfolio](https://github.com/ashutosh1919/masterPortfolio) and [React LiquidSwipe](https://github.com/ashutosh1919/react-liquidswipe), I understand the importance of animations on frontend, especially loading animations.
+
+I get many questions from beginners in frontend about how to create awesome loading animations or whether any loading animation library is available.
+
+The concept of React Awesome Loaders is born with an idea to provide code snippets to beginners so that they can implement extraordinary loading animations in their frontend work.
+
+Effectiveness of `styled-components` and power of **CSS in JS** has made it more compact as well as reusable. Because of that, I was able to publish it as an NPM package instead of just code snippets.
+
+## What are the differences with other loading animation packages?
+
+React Awesome Loaders is opinionated. It generates pro-quality loading animations which are completely customizable and auto-responsive.
+
+It includes many features:
+
+- Works with any web framework
+- Color customization
+- Size customization
+- Auto responsive (if `desktopSize` and `mobileSize` are not specified)
+- Strong performance and scalability
+- Extraordinary 3D animations
+- Use of diverse and efficient packages
+- And many other features
+
+## Install NPM Package
+
+```bash
+npm install react-awesome-loaders
+```
+
+## Import And Use
+
+```jsx
+import { LoaderName } from "react-awesome-loaders";
+
+function LoadingComponent() {
+  return <LoaderName desktopSize="128px" mobileSize="64px" />;
+}
+```
+
+The loaders are flexible to import and use wherever you want in any web framework that uses NPM.  
+The loaders are auto-responsive: the size automatically adjusts on smaller screens.  
+You can also set different sizes for different screens using `desktopSize` and `mobileSize`.
+
+## Personalize options
+
+Customization parameters are passed as props to the loader component.
+
+```jsx
+import { LoaderName } from "react-awesome-loaders";
+
+function LoadingComponent() {
+  return (
+    <LoaderName
+      className="myloader"
+      desktopSize="128px"
+      mobileSize="64px"
+    />
+  );
+}
+```
+
+You can look at the corresponding loader documentation on this website to see what parameters can be customized.

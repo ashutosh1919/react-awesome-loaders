@@ -1,0 +1,40 @@
+:root {
+  --sl-font: "Inter", system-ui, sans-serif;
+}
+
+.loader-demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 320px;
+  padding: 3rem 1rem 4rem;
+  margin: 1.5rem 0 2rem;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+}
+
+/* Loader animations extend outside their box; keep code blocks below */
+.sl-markdown-content .loader-demo + .expressive-code,
+.sl-markdown-content .loader-demo + figure,
+.sl-markdown-content .loader-demo + pre {
+  margin-top: 1rem;
+  position: relative;
+  z-index: 0;
+}
+
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  margin: 1.5rem 0;
+}
+
+.player-wrapper iframe,
+.player-wrapper > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

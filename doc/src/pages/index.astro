@@ -1,0 +1,103 @@
+---
+import "../styles/landing.css";
+import Title from "../components/Title";
+import { RandomLoader } from "../components/Loader";
+import compassImage from "../assets/internal/compass.svg";
+import gameImage from "../assets/internal/game.svg";
+import toolsImage from "../assets/internal/tools.svg";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>React Awesome Loaders</title>
+    <meta
+      name="description"
+      content="High quality, super responsive and completely customisable loading animations for React."
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+    />
+  </head>
+  <body>
+    <main class="landing">
+      <section class="hero">
+        <div class="hero-copy">
+          <Title client:load>Free & Open Source Loading Animations</Title>
+          <p class="hero-teaser">
+            Create high-quality, super-responsive and customizable loading
+            animations to insert into your website.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/getting-started/">Browse Docs</a>
+            <a
+              class="btn btn-secondary"
+              href="https://github.com/ashutosh1919/react-awesome-loaders"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub Repository
+            </a>
+          </div>
+        </div>
+        <div class="hero-preview">
+          <RandomLoader client:only="react" />
+        </div>
+      </section>
+
+      <section class="features">
+        <article class="feature">
+          <img src={toolsImage.src} width="100" height="100" alt="" />
+          <h2>Loading made simple</h2>
+          <p>
+            Awesome Loaders allows you to implement complex loading animations
+            with just a few lines of code.
+          </p>
+        </article>
+        <article class="feature">
+          <img src={compassImage.src} width="100" height="100" alt="" />
+          <h2>Configurable to your needs</h2>
+          <p>
+            Animations can be customized with advanced options like colors,
+            sizes and responsiveness.
+          </p>
+        </article>
+        <article class="feature">
+          <img src={gameImage.src} width="100" height="100" alt="" />
+          <h2>Plays well with any web framework</h2>
+          <p>
+            All animations work on any web framework that renders components on
+            the page.
+          </p>
+        </article>
+      </section>
+
+      <section class="cta">
+        <h2>Get started in minutes</h2>
+        <pre><code>npm install react-awesome-loaders</code></pre>
+        <a class="btn btn-primary" href="/getting-started/">Read the documentation</a>
+      </section>
+
+      <footer class="landing-footer">
+        <p>
+          © {new Date().getFullYear()} by
+          <a href="http://ashutoshhathidara.com/" target="_blank" rel="noopener noreferrer">
+            Ashutosh Hathidara
+          </a>.
+        </p>
+        <p>
+          This website is open source on
+          <a
+            href="https://github.com/ashutosh1919/react-awesome-loaders/tree/main/doc"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
